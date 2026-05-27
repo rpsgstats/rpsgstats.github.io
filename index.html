@@ -23,14 +23,15 @@ font-family:Arial,sans-serif;
 body{
 background:#050505;
 color:white;
+overflow-x:hidden;
 }
 
-/* CONTAINER */
+/* MAIN */
 
 .container{
-padding:25px 18px 120px;
 max-width:750px;
 margin:auto;
+padding:25px 18px 120px;
 }
 
 /* TOP */
@@ -42,14 +43,27 @@ align-items:center;
 }
 
 .top h1{
-font-size:52px;
+font-size:64px;
 font-weight:bold;
+}
+
+/* LOCK */
+
+.lock-btn{
+width:52px;
+height:52px;
+border-radius:18px;
+background:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#888;
 }
 
 /* SEARCH */
 
 .search-box{
-margin-top:25px;
+margin-top:24px;
 position:relative;
 }
 
@@ -64,7 +78,7 @@ color:#666;
 width:100%;
 background:#171717;
 border:none;
-border-radius:18px;
+border-radius:20px;
 padding:18px 18px 18px 48px;
 color:white;
 font-size:16px;
@@ -75,7 +89,6 @@ outline:none;
 
 .player-card{
 background:#141414;
-border:1px solid rgba(255,255,255,0.05);
 border-radius:28px;
 padding:20px;
 margin-top:18px;
@@ -84,11 +97,12 @@ justify-content:space-between;
 align-items:center;
 cursor:pointer;
 transition:0.3s;
+border:1px solid rgba(255,255,255,0.04);
 }
 
 .player-card:hover{
 transform:translateY(-4px);
-box-shadow:0 0 20px rgba(255,255,255,0.06);
+box-shadow:0 0 25px rgba(255,255,255,0.05);
 }
 
 /* LEFT */
@@ -163,20 +177,48 @@ font-size:12px;
 color:#777;
 }
 
+/* BOTTOM NAV */
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#090909;
+border-top:1px solid rgba(255,255,255,0.05);
+display:flex;
+justify-content:space-around;
+padding:14px 0;
+backdrop-filter:blur(10px);
+}
+
+.nav-item{
+text-align:center;
+color:#777;
+font-size:13px;
+font-weight:bold;
+}
+
+.nav-item i{
+font-size:20px;
+margin-bottom:6px;
+display:block;
+}
+
+.active{
+color:white;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
 
 .top h1{
-font-size:42px;
+font-size:52px;
 }
 
 .player-name{
 font-size:20px;
-}
-
-.player-card{
-padding:18px;
 }
 
 .player-pfp{
@@ -200,6 +242,10 @@ font-size:20px;
 
 <h1>Roster</h1>
 
+<div class="lock-btn">
+<i class="fa-solid fa-lock"></i>
+</div>
+
 </div>
 
 <!-- SEARCH -->
@@ -219,7 +265,22 @@ placeholder="Search players...">
 
 </div>
 
-<!-- DATABASE -->
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+
+<div class="nav-item active">
+<i class="fa-solid fa-users"></i>
+Roster
+</div>
+
+<div class="nav-item">
+<i class="fa-solid fa-chart-simple"></i>
+Rankings
+</div>
+
+</div>
+
+<!-- PLAYER DATABASE -->
 <script src="players.js"></script>
 
 <script>
