@@ -17,10 +17,6 @@ const positions = [
 "Striker"
 ];
 
-/* HOMEPAGE */
-
-if(playerList){
-
 players.forEach((player,index)=>{
 
 const color =
@@ -34,8 +30,7 @@ player.substring(0,2).toUpperCase();
 
 playerList.innerHTML += `
 
-<div class="player-card"
-onclick="window.location='player.html?name=${encodeURIComponent(player)}'">
+<div class="player-card">
 
 <div class="player-left">
 
@@ -87,8 +82,6 @@ PTS
 
 });
 
-/* SEARCH */
-
 document.getElementById("search")
 .addEventListener("input",e=>{
 
@@ -114,157 +107,3 @@ card.style.display="none";
 });
 
 });
-
-}
-
-/* PLAYER PAGE */
-
-const params =
-new URLSearchParams(window.location.search);
-
-const player =
-params.get("name");
-
-const profileContainer =
-document.getElementById("profileContainer");
-
-if(profileContainer && player){
-
-profileContainer.innerHTML = `
-
-<div class="profile-card">
-
-<div class="top-profile">
-
-<div class="profile-pic"></div>
-
-<div>
-
-<div class="big-name">
-${player}
-</div>
-
-<div class="player-rank">
-Bronze I
-</div>
-
-</div>
-
-</div>
-
-<div class="tags">
-
-<div class="tag">
-<i class="fa-solid fa-futbol"></i>
-Player
-</div>
-
-<div class="tag">
-<i class="fa-solid fa-earth-americas"></i>
-NA
-</div>
-
-<div class="tag">
-<i class="fa-solid fa-trophy"></i>
-RPSG
-</div>
-
-</div>
-
-<div class="main-stats">
-
-<div class="big-stat-card">
-
-<div class="stat-title">
-POINTS
-</div>
-
-<div class="big-number">
-0
-</div>
-
-</div>
-
-<div class="big-stat-card">
-
-<div class="stat-title">
-MARKET VALUE
-</div>
-
-<div class="big-number">
-£0
-</div>
-
-</div>
-
-</div>
-
-<div class="progress-section">
-
-<div class="stat-title">
-RANK PROGRESS
-</div>
-
-<div class="progress-bar">
-<div class="progress-fill"></div>
-</div>
-
-</div>
-
-<div class="small-grid">
-
-<div class="small-card">
-
-<div class="small-title">
-GOALS
-</div>
-
-<div class="small-number">
-0
-</div>
-
-</div>
-
-<div class="small-card">
-
-<div class="small-title">
-ASSISTS
-</div>
-
-<div class="small-number">
-0
-</div>
-
-</div>
-
-<div class="small-card">
-
-<div class="small-title">
-BLOCKS
-</div>
-
-<div class="small-number">
-0
-</div>
-
-</div>
-
-<div class="small-card">
-
-<div class="small-title">
-CLEAN SHEETS
-</div>
-
-<div class="small-number">
-0
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-`;
-
-}
