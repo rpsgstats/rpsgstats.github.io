@@ -3,11 +3,10 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>RPSG Player</title>
+<title>RPSG Stats</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,289 +23,249 @@ font-family:Arial,sans-serif;
 body{
 background:#050505;
 color:white;
-padding:14px;
 overflow-x:hidden;
 }
 
-/* BACK */
+/* MAIN */
 
-.back-btn{
-display:inline-flex;
-align-items:center;
-gap:8px;
-margin-bottom:16px;
-color:#888;
-text-decoration:none;
-font-size:14px;
-}
-
-/* MAIN PLAYER CARD */
-
-.profile-card{
+.container{
+padding:25px 18px 120px;
 max-width:700px;
 margin:auto;
-background:
-linear-gradient(
-180deg,
-rgba(55,35,20,0.88),
-rgba(18,12,8,0.96)
-);
-border-radius:34px;
-padding:24px;
-border:1px solid rgba(210,150,90,0.10);
-box-shadow:
-0 0 24px rgba(180,120,60,0.06),
-inset 0 1px 1px rgba(255,255,255,0.02);
 }
 
 /* TOP */
 
 .top{
 display:flex;
-align-items:flex-start;
-gap:18px;
+justify-content:space-between;
+align-items:center;
+}
+
+.top h1{
+font-size:52px;
+font-weight:bold;
+letter-spacing:-2px;
+}
+
+/* LOCK */
+
+.lock-btn{
+width:48px;
+height:48px;
+background:#101010;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#777;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+/* SEARCH */
+
+.search-box{
+margin-top:24px;
+position:relative;
+}
+
+.search-icon{
+position:absolute;
+left:18px;
+top:18px;
+color:#666;
+font-size:18px;
+}
+
+.search-box input{
+width:100%;
+background:#111;
+border:1px solid rgba(255,255,255,0.05);
+border-radius:20px;
+padding:18px 18px 18px 50px;
+color:white;
+font-size:16px;
+outline:none;
+transition:0.3s;
+}
+
+.search-box input:focus{
+border-color:rgba(255,255,255,0.12);
+}
+
+/* PLAYER LIST */
+
+#playerList{
+margin-top:12px;
+}
+
+/* PLAYER CARD */
+
+.player-card{
+background:linear-gradient(180deg,#111,#0d0d0d);
+border-radius:30px;
+padding:20px;
+margin-top:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.player-card:hover{
+transform:translateY(-4px);
+border-color:rgba(255,255,255,0.12);
+box-shadow:
+0 0 24px rgba(255,255,255,0.04);
+}
+
+/* LEFT */
+
+.player-left{
+display:flex;
+align-items:center;
+gap:16px;
 }
 
 /* PFP */
 
-.pfp{
-width:86px;
-height:86px;
-border-radius:24px;
-background:linear-gradient(135deg,#2b2b2b,#111);
+.player-pfp{
+width:64px;
+height:64px;
+border-radius:18px;
+background:linear-gradient(145deg,#2a2a2a,#0f0f0f);
 border:1px solid rgba(255,255,255,0.08);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:28px;
-font-weight:bold;
+font-weight:700;
+font-size:22px;
 color:white;
+box-shadow:
+0 0 12px rgba(255,255,255,0.03),
+inset 0 1px 1px rgba(255,255,255,0.04);
+transition:0.3s;
+}
+
+.player-card:hover .player-pfp{
+transform:scale(1.04);
 }
 
 /* NAME */
 
 .player-name{
-font-size:38px;
+font-size:21px;
 font-weight:bold;
-line-height:1;
+}
+
+/* ROW */
+
+.player-row{
+display:flex;
+gap:8px;
+margin-top:7px;
+align-items:center;
+flex-wrap:wrap;
 }
 
 /* RANK */
 
 .rank{
-display:inline-block;
-margin-top:10px;
-background:linear-gradient(
-145deg,
-rgba(180,120,60,0.25),
-rgba(90,55,25,0.18)
-);
-border:1px solid rgba(210,150,90,0.18);
-color:#d6b08a;
-padding:8px 14px;
-border-radius:16px;
+background:#1b1b1b;
+border:1px solid rgba(255,255,255,0.06);
+padding:5px 11px;
+border-radius:14px;
 font-size:12px;
 font-weight:600;
+color:#cfcfcf;
 }
 
-/* TAGS */
+/* POSITION */
 
-.tags{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-margin-top:14px;
-}
-
-.tag{
-background:#171717;
-padding:9px 13px;
-border-radius:16px;
-font-size:12px;
-color:#888;
-display:flex;
-align-items:center;
-gap:6px;
-}
-
-/* MAIN STATS */
-
-.main-stats{
-display:flex;
-justify-content:space-between;
-margin-top:28px;
-padding-bottom:20px;
-border-bottom:1px solid rgba(255,255,255,0.05);
-}
-
-.stat-title{
-font-size:11px;
-letter-spacing:1px;
-color:#b68f6b;
-}
-
-.stat-big{
-font-size:46px;
-font-weight:bold;
-margin-top:6px;
-}
-
-/* PROGRESS */
-
-.progress-section{
-margin-top:20px;
-}
-
-.progress-top{
-display:flex;
-justify-content:space-between;
-margin-bottom:10px;
-}
-
-.progress-title{
-font-size:12px;
-color:#b68f6b;
-}
-
-.progress-rank{
-font-size:13px;
-font-weight:bold;
-color:#d6b08a;
-}
-
-.progress-bar{
-width:100%;
-height:8px;
-background:#2a1a10;
-border-radius:999px;
-overflow:hidden;
-}
-
-.progress-fill{
-width:0%;
-height:100%;
-background:#d6b08a;
-border-radius:999px;
-}
-
-/* SHARE */
-
-.share-btn{
-margin-top:20px;
-width:100%;
-background:#111;
-border:none;
-padding:16px;
-border-radius:18px;
-color:white;
-font-weight:bold;
-font-size:15px;
-cursor:pointer;
-border:1px solid rgba(255,255,255,0.05);
-transition:0.3s;
-}
-
-.share-btn:hover{
-transform:translateY(-2px);
-}
-
-/* TABS */
-
-.tabs{
-display:flex;
-justify-content:space-around;
-margin-top:26px;
-padding-top:20px;
-border-top:1px solid rgba(255,255,255,0.05);
-}
-
-.tab{
-color:#9f866d;
+.position{
 font-size:14px;
+color:#7d7d7d;
+}
+
+/* STATS */
+
+.player-stats{
+margin-top:7px;
+font-size:13px;
+color:#777;
+}
+
+/* RIGHT */
+
+.player-right{
+text-align:right;
+}
+
+.points{
+font-size:30px;
 font-weight:bold;
-position:relative;
 }
 
-.active-tab{
-color:white;
+.pts{
+font-size:12px;
+color:#777;
+margin-top:2px;
 }
 
-.active-tab::after{
-content:"";
-position:absolute;
-bottom:-12px;
+/* BOTTOM NAV */
+
+.bottom-nav{
+position:fixed;
+bottom:0;
 left:0;
 width:100%;
-height:2px;
-background:#d6b08a;
-border-radius:999px;
+background:#090909;
+border-top:1px solid rgba(255,255,255,0.05);
+display:flex;
+justify-content:space-around;
+padding:14px 0;
+backdrop-filter:blur(10px);
 }
 
-/* STATS GRID */
-
-.stats-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-margin-top:26px;
-}
-
-/* STAT BOX */
-
-.stat-box{
-background:
-linear-gradient(
-180deg,
-rgba(42,24,14,0.92),
-rgba(18,10,6,0.95)
-);
-border-radius:24px;
-padding:22px;
-border:1px solid rgba(210,150,90,0.10);
-}
-
-.stat-small{
-font-size:12px;
-color:#c9a47d;
-letter-spacing:1px;
-}
-
-.stat-number{
-font-size:46px;
-font-weight:bold;
-margin-top:8px;
-}
-
-.stat-desc{
-margin-top:10px;
+.nav-item{
+text-align:center;
+color:#777;
 font-size:13px;
-color:#9e8368;
+font-weight:bold;
+}
+
+.nav-item i{
+display:block;
+font-size:18px;
+margin-bottom:6px;
+}
+
+.active{
+color:white;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
+.top h1{
+font-size:44px;
+}
+
 .player-name{
-font-size:30px;
+font-size:19px;
 }
 
-.pfp{
-width:78px;
-height:78px;
-font-size:24px;
+.player-card{
+padding:18px;
 }
 
-.stat-big{
-font-size:38px;
-}
-
-.stat-number{
-font-size:38px;
-}
-
-.stats-grid{
-gap:12px;
+.player-pfp{
+width:58px;
+height:58px;
+font-size:20px;
 }
 
 }
@@ -317,302 +276,156 @@ gap:12px;
 
 <body>
 
-<a href="index.html"
-class="back-btn">
-
-<i class="fa-solid fa-arrow-left"></i>
-Back
-
-</a>
-
-<div class="profile-card">
+<div class="container">
 
 <!-- TOP -->
 <div class="top">
 
-<div class="pfp"
-id="profilePic">
-</div>
+<h1>Roster</h1>
 
-<div>
-
-<div class="player-name"
-id="playerName">
-Loading...
-</div>
-
-<div class="rank"
-id="playerRank">
-Bronze I
-</div>
-
-<div class="tags">
-
-<div class="tag">
-<i class="fa-solid fa-futbol"></i>
-Player
-</div>
-
-<div class="tag">
-<i class="fa-solid fa-location-dot"></i>
-NA
-</div>
-
-<div class="tag">
-<i class="fa-solid fa-trophy"></i>
-RPSG
+<div class="lock-btn">
+<i class="fa-solid fa-lock"></i>
 </div>
 
 </div>
 
+<!-- SEARCH -->
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+<input
+type="text"
+id="search"
+placeholder="Search players...">
+
+</div>
+
+<!-- PLAYERS -->
+<div id="playerList"></div>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+
+<div class="nav-item active">
+<i class="fa-solid fa-users"></i>
+Roster
+</div>
+
+<div class="nav-item">
+<i class="fa-solid fa-chart-simple"></i>
+Rankings
 </div>
 
 </div>
 
-<!-- MAIN STATS -->
-<div class="main-stats">
-
-<div>
-
-<div class="stat-title">
-POINTS
-</div>
-
-<div class="stat-big"
-id="points">
-0
-</div>
-
-</div>
-
-<div>
-
-<div class="stat-title">
-MARKET VALUE
-</div>
-
-<div class="stat-big"
-id="value">
-£0
-</div>
-
-</div>
-
-</div>
-
-<!-- PROGRESS -->
-<div class="progress-section">
-
-<div class="progress-top">
-
-<div class="progress-title">
-RANK PROGRESS
-</div>
-
-<div class="progress-rank">
-20 pts to Bronze II
-</div>
-
-</div>
-
-<div class="progress-bar">
-
-<div class="progress-fill"
-id="progressFill">
-</div>
-
-</div>
-
-</div>
-
-<!-- SHARE -->
-<button
-class="share-btn"
-onclick="copyLink()">
-
-<i class="fa-solid fa-link"></i>
-Copy link to this card
-
-</button>
-
-<!-- TABS -->
-<div class="tabs">
-
-<div class="tab active-tab">
-Profile
-</div>
-
-<div class="tab">
-Stats
-</div>
-
-<div class="tab">
-Clips
-</div>
-
-<div class="tab">
-Career
-</div>
-
-</div>
-
-<!-- STATS -->
-<div class="stats-grid">
-
-<div class="stat-box">
-
-<div class="stat-small">
-GOALS
-</div>
-
-<div class="stat-number"
-id="goals">
-0
-</div>
-
-<div class="stat-desc">
-0 G+A combined
-</div>
-
-</div>
-
-<div class="stat-box">
-
-<div class="stat-small">
-ASSISTS
-</div>
-
-<div class="stat-number"
-id="assists">
-0
-</div>
-
-<div class="stat-desc">
-0 ast/goal ratio
-</div>
-
-</div>
-
-<div class="stat-box">
-
-<div class="stat-small">
-CLEAN SHEETS
-</div>
-
-<div class="stat-number"
-id="cleansheets">
-0
-</div>
-
-<div class="stat-desc">
-0 matches
-</div>
-
-</div>
-
-<div class="stat-box">
-
-<div class="stat-small">
-ALL-TIME PTS
-</div>
-
-<div class="stat-number"
-id="blocks">
-0
-</div>
-
-<div class="stat-desc">
-RPSG career
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- DATABASE -->
 <script src="players.js"></script>
 
 <script>
 
-const params =
-new URLSearchParams(window.location.search);
+const playerList =
+document.getElementById("playerList");
 
-const playerName =
-decodeURIComponent(
-params.get("name") || "Unknown"
-);
+/* LOAD PLAYERS */
 
-const player =
-players[playerName] || {
+Object.keys(players).forEach(player => {
 
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-blocks:0,
-cleansheets:0,
-value:"£0"
+const data =
+players[player];
 
-};
+const initials =
+player.substring(0,2).toUpperCase();
 
-/* LOAD PLAYER */
+playerList.innerHTML += `
 
-document.getElementById("playerName")
-.textContent = playerName;
+<div class="player-card"
+onclick="window.location.href='player.html?name=${encodeURIComponent(player)}'">
 
-document.getElementById("profilePic")
-.textContent =
-playerName.substring(0,2).toUpperCase();
+<div class="player-left">
 
-document.getElementById("playerRank")
-.textContent =
-player.rank;
+<div class="player-pfp">
+${initials}
+</div>
 
-document.getElementById("points")
-.textContent =
-player.points;
+<div>
 
-document.getElementById("value")
-.textContent =
-player.value;
+<div class="player-name">
+${player}
+</div>
 
-document.getElementById("goals")
-.textContent =
-player.goals;
+<div class="player-row">
 
-document.getElementById("assists")
-.textContent =
-player.assists;
+<div class="rank">
+${data.rank}
+</div>
 
-document.getElementById("blocks")
-.textContent =
-player.blocks;
+<div class="position">
+${data.position}
+</div>
 
-document.getElementById("cleansheets")
-.textContent =
-player.cleansheets;
+</div>
 
-/* PROGRESS */
+<div class="player-stats">
 
-let progress =
-(player.points / 20) * 100;
+${data.goals}G •
+${data.assists}A •
+${data.blocks}B •
+${data.cleansheets}CS
 
-document.getElementById("progressFill")
-.style.width =
-progress + "%";
+</div>
 
-/* SHARE */
+</div>
 
-function copyLink(){
+</div>
 
-navigator.clipboard.writeText(
-window.location.href
-);
+<div class="player-right">
 
-alert("Profile link copied!");
+<div class="points">
+${data.points}
+</div>
 
+<div class="pts">
+PTS
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+/* SEARCH */
+
+document.getElementById("search")
+.addEventListener("input",e=>{
+
+let value =
+e.target.value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".player-card");
+
+cards.forEach(card=>{
+
+let name =
+card.querySelector(".player-name")
+.innerText.toLowerCase();
+
+if(name.includes(value)){
+card.style.display="flex";
 }
+else{
+card.style.display="none";
+}
+
+});
+
+});
 
 </script>
 
