@@ -3,9 +3,7 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RPSG Stats</title>
 
@@ -14,61 +12,39 @@ content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<script defer src="players.js"></script>
-<script defer src="script.js"></script>
-
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- TOP -->
-    <div class="top">
+<div class="top">
 
-        <h1>
-            Roster
-        </h1>
+<h1>Roster</h1>
 
-        <div class="lock-btn">
-            <i class="fa-solid fa-lock"></i>
-        </div>
-
-    </div>
-
-    <!-- SEARCH -->
-    <div class="search-box">
-
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-
-        <input
-        type="text"
-        id="search"
-        placeholder="Search players...">
-
-    </div>
-
-    <!-- PLAYERS -->
-    <div id="playerList"></div>
+<div class="lock-btn">
+<i class="fa-solid fa-lock"></i>
+</div>
 
 </div>
 
-<!-- BOTTOM NAV -->
-<div class="bottom-nav">
+<div class="search-box">
 
-    <div class="nav-item active">
-        <i class="fa-solid fa-users"></i>
-        <br>
-        Roster
-    </div>
+<i class="fa-solid fa-magnifying-glass search-icon"></i>
 
-    <div class="nav-item">
-        <i class="fa-solid fa-chart-simple"></i>
-        <br>
-        Rankings
-    </div>
+<input
+type="text"
+id="search"
+placeholder="Search players...">
 
 </div>
+
+<div id="playerList"></div>
+
+</div>
+
+<script src="players.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
