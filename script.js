@@ -1,3 +1,5 @@
+window.onload = function(){
+
 const playerList =
 document.getElementById("playerList");
 
@@ -82,6 +84,8 @@ PTS
 
 });
 
+/* SEARCH */
+
 document.getElementById("search")
 .addEventListener("input",e=>{
 
@@ -107,3 +111,5 @@ card.style.display="none";
 });
 
 });
+
+}
