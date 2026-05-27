@@ -7,116 +7,108 @@
 
 <title>RPSG Stats</title>
 
-<!-- ICONS -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-    background:#050505;
-    color:white;
+background:#050505;
+color:white;
 }
 
-/* MAIN */
 .container{
-    padding:25px 18px 120px;
-    max-width:700px;
-    margin:auto;
+padding:25px 18px 120px;
+max-width:700px;
+margin:auto;
 }
 
-/* TOP */
 .top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .top h1{
-    font-size:52px;
-    font-weight:bold;
+font-size:52px;
+font-weight:bold;
 }
 
-/* LOCK */
 .lock-btn{
-    width:48px;
-    height:48px;
-    background:#111;
-    border-radius:16px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#888;
+width:48px;
+height:48px;
+background:#111;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#888;
 }
 
-/* SEARCH */
 .search-box{
-    margin-top:25px;
-    position:relative;
+margin-top:25px;
+position:relative;
 }
 
 .search-icon{
-    position:absolute;
-    left:18px;
-    top:18px;
-    color:#666;
+position:absolute;
+left:18px;
+top:18px;
+color:#666;
 }
 
 .search-box input{
-    width:100%;
-    background:#171717;
-    border:none;
-    border-radius:18px;
-    padding:18px 18px 18px 48px;
-    color:white;
-    font-size:16px;
-    outline:none;
+width:100%;
+background:#171717;
+border:none;
+border-radius:18px;
+padding:18px 18px 18px 48px;
+color:white;
+font-size:16px;
+outline:none;
 }
 
-/* PLAYER CARD */
 .player-card{
-    background:#141414;
-    border:1px solid rgba(255,255,255,0.05);
-    border-radius:28px;
-    padding:20px;
-    margin-top:18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    transition:0.3s;
-    cursor:pointer;
+background:#141414;
+border:1px solid rgba(255,255,255,0.05);
+border-radius:28px;
+padding:20px;
+margin-top:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+transition:0.3s;
 }
 
 .player-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 0 20px rgba(255,255,255,0.06);
+transform:translateY(-4px);
+box-shadow:0 0 20px rgba(255,255,255,0.06);
 }
 
-/* LEFT */
 .player-left{
-    display:flex;
-    align-items:center;
-    gap:16px;
+display:flex;
+align-items:center;
+gap:16px;
 }
 
-/* PFP */
 .player-pfp{
-    width:64px;
-    height:64px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:22px;
-    color:white;
+width:64px;
+height:64px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:22px;
+color:white;
 }
 
 .red{background:#ff4d4d;}
@@ -125,95 +117,76 @@ body{
 .orange{background:#f4a300;}
 .purple{background:#8e5eff;}
 
-/* NAME */
 .player-name{
-    font-size:20px;
-    font-weight:bold;
+font-size:20px;
+font-weight:bold;
 }
 
-/* ROW */
 .player-row{
-    margin-top:6px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    flex-wrap:wrap;
+margin-top:6px;
+display:flex;
+gap:8px;
+align-items:center;
 }
 
 .rank{
-    background:#2a2a2a;
-    color:#aaa;
-    padding:4px 10px;
-    border-radius:14px;
-    font-size:12px;
+background:#2a2a2a;
+color:#aaa;
+padding:4px 10px;
+border-radius:14px;
+font-size:12px;
 }
 
 .position{
-    color:#888;
-    font-size:14px;
+color:#888;
+font-size:14px;
 }
 
-/* STATS */
 .player-stats{
-    margin-top:7px;
-    color:#888;
-    font-size:13px;
+margin-top:7px;
+color:#888;
+font-size:13px;
 }
 
-/* RIGHT */
 .player-right{
-    text-align:center;
+text-align:center;
 }
 
 .points{
-    font-size:28px;
-    font-weight:bold;
+font-size:28px;
+font-weight:bold;
 }
 
 .pts{
-    color:#777;
-    font-size:12px;
+color:#777;
+font-size:12px;
 }
 
-/* BOTTOM NAV */
 .bottom-nav{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#090909;
-    border-top:1px solid rgba(255,255,255,0.06);
-    display:flex;
-    justify-content:space-around;
-    padding:14px 0;
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#090909;
+border-top:1px solid rgba(255,255,255,0.06);
+display:flex;
+justify-content:space-around;
+padding:14px 0;
 }
 
 .nav-item{
-    text-align:center;
-    color:#777;
-    font-size:13px;
+text-align:center;
+color:#777;
+font-size:13px;
 }
 
 .nav-item i{
-    font-size:18px;
-    margin-bottom:6px;
+font-size:18px;
+margin-bottom:6px;
 }
 
 .active{
-    color:white;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.top h1{
-    font-size:42px;
-}
-
-.player-card{
-    padding:18px;
-}
-
+color:white;
 }
 
 </style>
@@ -224,7 +197,6 @@ body{
 
 <div class="container">
 
-<!-- TOP -->
 <div class="top">
 
 <h1>Roster</h1>
@@ -235,7 +207,6 @@ body{
 
 </div>
 
-<!-- SEARCH -->
 <div class="search-box">
 
 <i class="fa-solid fa-magnifying-glass search-icon"></i>
@@ -247,12 +218,10 @@ placeholder="Search players...">
 
 </div>
 
-<!-- PLAYERS -->
 <div id="playerList"></div>
 
 </div>
 
-<!-- BOTTOM NAV -->
 <div class="bottom-nav">
 
 <div class="nav-item active">
@@ -357,7 +326,8 @@ player.substring(0,2).toUpperCase();
 
 playerList.innerHTML += `
 
-<div class="player-card">
+<div class="player-card"
+onclick="window.location.href='player.html?name=${encodeURIComponent(player)}'">
 
 <div class="player-left">
 
@@ -408,8 +378,6 @@ PTS
 `;
 
 });
-
-/* SEARCH */
 
 document.getElementById("search")
 .addEventListener("input",e=>{
