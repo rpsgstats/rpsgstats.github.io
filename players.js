@@ -35,7 +35,7 @@ value:"£0"
 
 "ammar":{
 rank:"Bronze I",
-position:"Attcaker",
+position:"Attacker",
 points:0,
 goals:0,
 assists:0,
@@ -68,7 +68,7 @@ value:"£0"
 
 "sweatyballs.VRFS":{
 rank:"Bronze I",
-position:"Striker",
+position:"Goalkeeper",
 points:0,
 goals:0,
 assists:0,
@@ -79,7 +79,7 @@ value:"£0"
 
 "Luki":{
 rank:"Bronze I",
-position:"Defender",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
@@ -90,7 +90,7 @@ value:"£0"
 
 "ccxze":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -112,7 +112,7 @@ value:"£0"
 
 "batata jr":{
 rank:"Bronze I",
-position:"Attacker",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
@@ -123,7 +123,7 @@ value:"£0"
 
 "diablo.tg":{
 rank:"Bronze I",
-position:"Attacker",
+position:"Striker",
 points:0,
 goals:0,
 assists:0,
@@ -145,7 +145,7 @@ value:"£0"
 
 "Dutch.":{
 rank:"Bronze I",
-position:"Midfielder",
+position:"Goalkeeper",
 points:0,
 goals:0,
 assists:0,
@@ -167,7 +167,7 @@ value:"£0"
 
 "vinassotuff":{
 rank:"Bronze I",
-position:"Winger",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
@@ -178,7 +178,7 @@ value:"£0"
 
 "Arditaaaa":{
 rank:"Bronze I",
-position:"Midfielder",
+position:"Striker",
 points:0,
 goals:0,
 assists:0,
@@ -189,7 +189,7 @@ value:"£0"
 
 "Zta.":{
 rank:"Bronze I",
-position:"Attacker",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -200,7 +200,7 @@ value:"£0"
 
 "Goob":{
 rank:"Bronze I",
-position:"Midfielder",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -211,7 +211,7 @@ value:"£0"
 
 "el bicho":{
 rank:"Bronze I",
-position:"Winger",
+position:"Attacker",
 points:0,
 goals:0,
 assists:0,
@@ -233,7 +233,7 @@ value:"£0"
 
 "Hyper. Vrfs pro":{
 rank:"Bronze I",
-position:"Winger",
+position:"Striker",
 points:0,
 goals:0,
 assists:0,
@@ -244,7 +244,7 @@ value:"£0"
 
 "Brody":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -255,7 +255,7 @@ value:"£0"
 
 "JB-KAFZ":{
 rank:"Bronze I",
-position:"Defender",
+position:"Goalkeeper",
 points:0,
 goals:0,
 assists:0,
@@ -277,7 +277,7 @@ value:"£0"
 
 "ZZZ":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
@@ -299,7 +299,7 @@ value:"£0"
 
 "Lucas":{
 rank:"Bronze I",
-position:"Midfielder",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -321,7 +321,7 @@ value:"£0"
 
 "MEMOPRIMEWC":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
@@ -332,7 +332,7 @@ value:"£0"
 
 "AntonioTheSt.":{
 rank:"Bronze I",
-position:"Striker",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -343,7 +343,7 @@ value:"£0"
 
 "Yamal?":{
 rank:"Bronze I",
-position:"Defender",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -365,7 +365,7 @@ value:"£0"
 
 "Ghost=Him":{
 rank:"Bronze I",
-position:"Defender",
+position:"Striker",
 points:0,
 goals:0,
 assists:0,
@@ -376,7 +376,7 @@ value:"£0"
 
 "qmxrk":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -420,7 +420,7 @@ value:"£0"
 
 "Saiku":{
 rank:"Bronze I",
-position:"Midfielder",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -431,7 +431,7 @@ value:"£0"
 
 "rifleken":{
 rank:"Bronze I",
-position:"Attacker",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -442,7 +442,7 @@ value:"£0"
 
 "sky":{
 rank:"Bronze I",
-position:"Winger",
+position:"Goalkeeper",
 points:0,
 goals:0,
 assists:0,
@@ -453,7 +453,7 @@ value:"£0"
 
 "Snowzzz":{
 rank:"Bronze I",
-position:"Defender",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
@@ -475,7 +475,7 @@ value:"£0"
 
 "ATOMIC":{
 rank:"Bronze I",
-position:"Winger",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -497,7 +497,18 @@ value:"£0"
 
 "Vortex":{
 rank:"Bronze I",
-position:"Attacker",
+position:"Winger",
+points:0,
+goals:0,
+assists:0,
+blocks:0,
+cleansheets:0,
+value:"£0"
+},
+
+"slax":{
+rank:"Bronze I",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -508,7 +519,18 @@ value:"£0"
 
 "xd234jsjs":{
 rank:"Bronze I",
-position:"Defender",
+position:"Goalkeeper",
+points:0,
+goals:0,
+assists:0,
+blocks:0,
+cleansheets:0,
+value:"£0"
+},
+
+"Joshwini":{
+rank:"Bronze I",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
