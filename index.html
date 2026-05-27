@@ -3,7 +3,8 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>RPSG Stats</title>
 
@@ -22,13 +23,18 @@ font-family:Arial,sans-serif;
 body{
 background:#050505;
 color:white;
+overflow-x:hidden;
 }
+
+/* MAIN */
 
 .container{
 padding:25px 18px 120px;
 max-width:700px;
 margin:auto;
 }
+
+/* TOP */
 
 .top{
 display:flex;
@@ -40,6 +46,21 @@ align-items:center;
 font-size:52px;
 font-weight:bold;
 }
+
+/* LOCK */
+
+.lock-btn{
+width:48px;
+height:48px;
+background:#111;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#888;
+}
+
+/* SEARCH */
 
 .search-box{
 margin-top:25px;
@@ -64,8 +85,11 @@ font-size:16px;
 outline:none;
 }
 
+/* PLAYER CARD */
+
 .player-card{
 background:#141414;
+border:1px solid rgba(255,255,255,0.05);
 border-radius:28px;
 padding:20px;
 margin-top:18px;
@@ -78,7 +102,10 @@ transition:0.3s;
 
 .player-card:hover{
 transform:translateY(-4px);
+box-shadow:0 0 20px rgba(255,255,255,0.06);
 }
+
+/* LEFT */
 
 .player-left{
 display:flex;
@@ -86,46 +113,63 @@ align-items:center;
 gap:16px;
 }
 
+/* PFP */
+
 .player-pfp{
 width:64px;
 height:64px;
 border-radius:18px;
-background:#222;
+background:linear-gradient(135deg,#8b5cf6,#a855f7);
 display:flex;
 align-items:center;
 justify-content:center;
 font-weight:bold;
 font-size:22px;
+color:white;
 }
+
+/* NAME */
 
 .player-name{
 font-size:20px;
 font-weight:bold;
 }
 
+/* ROW */
+
 .player-row{
 margin-top:6px;
 display:flex;
+align-items:center;
 gap:8px;
+flex-wrap:wrap;
 }
 
 .rank{
 background:#2a2a2a;
+color:#aaa;
 padding:4px 10px;
 border-radius:14px;
 font-size:12px;
-color:#aaa;
 }
 
 .position{
-color:#777;
+color:#888;
 font-size:14px;
 }
 
+/* STATS */
+
 .player-stats{
 margin-top:7px;
-color:#777;
+color:#888;
 font-size:13px;
+}
+
+/* RIGHT */
+
+.player-right{
+text-align:center;
 }
 
 .points{
@@ -134,8 +178,51 @@ font-weight:bold;
 }
 
 .pts{
-font-size:12px;
 color:#777;
+font-size:12px;
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#090909;
+border-top:1px solid rgba(255,255,255,0.06);
+display:flex;
+justify-content:space-around;
+padding:14px 0;
+}
+
+.nav-item{
+text-align:center;
+color:#777;
+font-size:13px;
+}
+
+.nav-item i{
+font-size:18px;
+margin-bottom:6px;
+}
+
+.active{
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.top h1{
+font-size:42px;
+}
+
+.player-card{
+padding:18px;
+}
+
 }
 
 </style>
@@ -146,10 +233,18 @@ color:#777;
 
 <div class="container">
 
+<!-- TOP -->
 <div class="top">
+
 <h1>Roster</h1>
+
+<div class="lock-btn">
+<i class="fa-solid fa-lock"></i>
 </div>
 
+</div>
+
+<!-- SEARCH -->
 <div class="search-box">
 
 <i class="fa-solid fa-magnifying-glass search-icon"></i>
@@ -161,7 +256,25 @@ placeholder="Search players...">
 
 </div>
 
+<!-- PLAYERS -->
 <div id="playerList"></div>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+
+<div class="nav-item active">
+<i class="fa-solid fa-users"></i>
+<br>
+Roster
+</div>
+
+<div class="nav-item">
+<i class="fa-solid fa-chart-simple"></i>
+<br>
+Rankings
+</div>
 
 </div>
 
@@ -172,9 +285,12 @@ placeholder="Search players...">
 const playerList =
 document.getElementById("playerList");
 
+/* LOAD PLAYERS */
+
 Object.keys(players).forEach(player => {
 
-const data = players[player];
+const data =
+players[player];
 
 const initials =
 player.substring(0,2).toUpperCase();
@@ -219,7 +335,7 @@ ${data.cleansheets}CS
 
 </div>
 
-<div>
+<div class="player-right">
 
 <div class="points">
 ${data.points}
@@ -236,6 +352,8 @@ PTS
 `;
 
 });
+
+/* SEARCH */
 
 document.getElementById("search")
 .addEventListener("input",e=>{
