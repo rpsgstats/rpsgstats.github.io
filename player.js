@@ -320,3 +320,14 @@ link:"#"
 }
 
 };
+<div class="bio-section">
+
+<div id="playerBio" class="player-bio"></div>
+
+<a id="playerLink"
+target="_blank"
+class="player-link">
+Visit Link
+</a>
+
+</div>
