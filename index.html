@@ -3,6 +3,7 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
@@ -102,12 +103,7 @@ margin-top:12px;
 /* PLAYER CARD */
 
 .player-card{
-background:
-linear-gradient(
-180deg,
-rgba(55,35,20,0.88),
-rgba(18,12,8,0.96)
-);
+background:linear-gradient(180deg,#111,#0d0d0d);
 border-radius:30px;
 padding:20px;
 margin-top:18px;
@@ -116,17 +112,14 @@ justify-content:space-between;
 align-items:center;
 cursor:pointer;
 transition:0.3s;
-border:1px solid rgba(210,150,90,0.10);
-box-shadow:
-0 0 18px rgba(180,120,60,0.05),
-inset 0 1px 1px rgba(255,255,255,0.02);
+border:1px solid rgba(255,255,255,0.05);
 }
 
 .player-card:hover{
 transform:translateY(-4px);
-border-color:rgba(210,150,90,0.18);
+border-color:rgba(255,255,255,0.12);
 box-shadow:
-0 0 26px rgba(180,120,60,0.10);
+0 0 25px rgba(255,255,255,0.04);
 }
 
 /* LEFT */
@@ -150,7 +143,7 @@ align-items:center;
 justify-content:center;
 font-weight:700;
 font-size:22px;
-color:white;
+color:#ffffff;
 box-shadow:
 0 0 12px rgba(255,255,255,0.03),
 inset 0 1px 1px rgba(255,255,255,0.04);
@@ -159,6 +152,7 @@ transition:0.3s;
 
 .player-card:hover .player-pfp{
 transform:scale(1.04);
+border-color:rgba(255,255,255,0.15);
 }
 
 /* NAME */
@@ -178,7 +172,7 @@ align-items:center;
 flex-wrap:wrap;
 }
 
-/* BRONZE BUBBLE */
+/* BRONZE RANK */
 
 .rank{
 background:linear-gradient(
@@ -187,21 +181,30 @@ rgba(180,120,60,0.25),
 rgba(90,55,25,0.18)
 );
 border:1px solid rgba(210,150,90,0.18);
+color:#d6b08a;
 padding:5px 11px;
 border-radius:14px;
 font-size:12px;
 font-weight:600;
-color:#d6b08a;
+backdrop-filter:blur(6px);
 box-shadow:
 0 0 8px rgba(180,120,60,0.08),
 inset 0 1px 1px rgba(255,255,255,0.03);
+transition:0.3s;
+}
+
+.player-card:hover .rank{
+transform:translateY(-1px);
+box-shadow:
+0 0 14px rgba(180,120,60,0.14),
+inset 0 1px 1px rgba(255,255,255,0.04);
 }
 
 /* POSITION */
 
 .position{
 font-size:14px;
-color:#b68f6b;
+color:#7d7d7d;
 }
 
 /* STATS */
@@ -209,7 +212,7 @@ color:#b68f6b;
 .player-stats{
 margin-top:7px;
 font-size:13px;
-color:#b5967b;
+color:#777;
 }
 
 /* RIGHT */
@@ -221,12 +224,11 @@ text-align:right;
 .points{
 font-size:30px;
 font-weight:bold;
-color:white;
 }
 
 .pts{
 font-size:12px;
-color:#a68769;
+color:#777;
 margin-top:2px;
 }
 
@@ -259,7 +261,7 @@ margin-bottom:6px;
 }
 
 .active{
-color:#d6b08a;
+color:white;
 }
 
 /* MOBILE */
