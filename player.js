@@ -52,5 +52,3 @@ const players = [
 "Zta."
 
 ];
-
-</html>
