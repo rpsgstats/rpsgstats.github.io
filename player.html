@@ -24,7 +24,7 @@ font-family:Arial,sans-serif;
 body{
 background:#050505;
 color:white;
-padding:16px;
+padding:14px;
 overflow-x:hidden;
 }
 
@@ -33,21 +33,21 @@ overflow-x:hidden;
 .back-btn{
 display:inline-flex;
 align-items:center;
-gap:10px;
-margin-bottom:18px;
+gap:8px;
+margin-bottom:16px;
 color:#888;
 text-decoration:none;
 font-size:14px;
 }
 
-/* CARD */
+/* MAIN CARD */
 
 .profile-card{
 max-width:700px;
 margin:auto;
-background:#101010;
-border-radius:32px;
-padding:22px;
+background:linear-gradient(180deg,#111,#0a0a0a);
+border-radius:34px;
+padding:24px;
 border:1px solid rgba(255,255,255,0.05);
 }
 
@@ -55,38 +55,42 @@ border:1px solid rgba(255,255,255,0.05);
 
 .top{
 display:flex;
-align-items:center;
+align-items:flex-start;
 gap:18px;
 }
 
 /* PFP */
 
 .pfp{
-width:82px;
-height:82px;
-border-radius:22px;
-background:linear-gradient(135deg,#8b5cf6,#a855f7);
+width:86px;
+height:86px;
+border-radius:24px;
+background:linear-gradient(135deg,#2b2b2b,#111);
+border:1px solid rgba(255,255,255,0.08);
 display:flex;
 align-items:center;
 justify-content:center;
 font-size:28px;
 font-weight:bold;
+color:white;
 }
 
-/* INFO */
+/* NAME */
 
 .player-name{
-font-size:34px;
+font-size:38px;
 font-weight:bold;
 line-height:1;
 }
+
+/* RANK */
 
 .rank{
 display:inline-block;
 margin-top:10px;
 background:#222;
-padding:7px 14px;
-border-radius:14px;
+padding:8px 14px;
+border-radius:16px;
 font-size:12px;
 color:#ccc;
 }
@@ -96,8 +100,8 @@ color:#ccc;
 .tags{
 display:flex;
 gap:8px;
-margin-top:16px;
 flex-wrap:wrap;
+margin-top:14px;
 }
 
 .tag{
@@ -111,55 +115,26 @@ align-items:center;
 gap:6px;
 }
 
-/* QUICK STATS */
+/* MAIN STATS */
 
-.quick-stats{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin-top:24px;
+.main-stats{
+display:flex;
+justify-content:space-between;
+margin-top:28px;
+padding-bottom:20px;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-.quick-box{
-background:#0c0c0c;
-padding:20px;
-border-radius:22px;
-text-align:center;
-border:1px solid rgba(255,255,255,0.04);
+.stat-title{
+font-size:11px;
+letter-spacing:1px;
+color:#777;
 }
 
-.quick-number{
-font-size:34px;
+.stat-big{
+font-size:46px;
 font-weight:bold;
-}
-
-.quick-label{
 margin-top:6px;
-font-size:12px;
-color:#777;
-letter-spacing:1px;
-}
-
-/* VALUE */
-
-.value-card{
-background:#0c0c0c;
-padding:22px;
-border-radius:22px;
-margin-top:14px;
-border:1px solid rgba(255,255,255,0.04);
-}
-
-.value-title{
-font-size:12px;
-color:#777;
-letter-spacing:1px;
-}
-
-.value-number{
-font-size:42px;
-font-weight:bold;
-margin-top:8px;
 }
 
 /* PROGRESS */
@@ -180,9 +155,9 @@ color:#777;
 }
 
 .progress-rank{
-font-size:12px;
-color:#4ade80;
+font-size:13px;
 font-weight:bold;
+color:#4ade80;
 }
 
 .progress-bar{
@@ -200,47 +175,96 @@ background:white;
 border-radius:999px;
 }
 
+.progress-bottom{
+display:flex;
+justify-content:space-between;
+margin-top:8px;
+font-size:12px;
+color:#777;
+}
+
 /* SHARE */
 
 .share-btn{
-margin-top:22px;
+margin-top:20px;
 width:100%;
-background:white;
-color:black;
+background:#111;
 border:none;
-padding:15px;
+padding:16px;
 border-radius:18px;
+color:white;
 font-weight:bold;
-font-size:14px;
+font-size:15px;
 cursor:pointer;
+border:1px solid rgba(255,255,255,0.05);
 }
 
-/* EXTRA STATS */
+/* TABS */
 
-.extra-stats{
+.tabs{
+display:flex;
+justify-content:space-around;
+margin-top:26px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.tab{
+color:#777;
+font-size:14px;
+font-weight:bold;
+position:relative;
+}
+
+.active-tab{
+color:white;
+}
+
+.active-tab::after{
+content:"";
+position:absolute;
+bottom:-12px;
+left:0;
+width:100%;
+height:2px;
+background:white;
+border-radius:999px;
+}
+
+/* GRID */
+
+.stats-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:12px;
-margin-top:16px;
+gap:14px;
+margin-top:26px;
 }
 
-.extra-box{
-background:#0c0c0c;
-padding:20px;
-border-radius:22px;
+/* BOX */
+
+.stat-box{
+background:#111;
+border-radius:24px;
+padding:22px;
 border:1px solid rgba(255,255,255,0.04);
 }
 
-.extra-title{
+.stat-small{
 font-size:12px;
 color:#777;
 letter-spacing:1px;
 }
 
-.extra-number{
-font-size:38px;
+.stat-number{
+font-size:46px;
 font-weight:bold;
 margin-top:8px;
+}
+
+.stat-desc{
+margin-top:10px;
+font-size:13px;
+color:#777;
 }
 
 /* MOBILE */
@@ -248,25 +272,25 @@ margin-top:8px;
 @media(max-width:768px){
 
 .player-name{
-font-size:28px;
+font-size:30px;
 }
 
 .pfp{
-width:74px;
-height:74px;
+width:78px;
+height:78px;
 font-size:24px;
 }
 
-.quick-number{
-font-size:30px;
+.stat-big{
+font-size:38px;
 }
 
-.value-number{
-font-size:34px;
+.stat-number{
+font-size:38px;
 }
 
-.extra-number{
-font-size:30px;
+.stats-grid{
+gap:12px;
 }
 
 }
@@ -319,7 +343,7 @@ NA
 </div>
 
 <div class="tag">
-<i class="fa-solid fa-trophy"></i>
+<i class="fa-solid fa-flag"></i>
 RPSG
 </div>
 
@@ -329,73 +353,33 @@ RPSG
 
 </div>
 
-<!-- QUICK STATS -->
-<div class="quick-stats">
+<!-- MAIN STATS -->
+<div class="main-stats">
 
-<div class="quick-box">
+<div>
 
-<div class="quick-number"
+<div class="stat-title">
+POINTS
+</div>
+
+<div class="stat-big"
 id="points">
 0
 </div>
 
-<div class="quick-label">
-PTS
 </div>
 
-</div>
+<div>
 
-<div class="quick-box">
-
-<div class="quick-number"
-id="goals">
-0
-</div>
-
-<div class="quick-label">
-GOALS
-</div>
-
-</div>
-
-<div class="quick-box">
-
-<div class="quick-number"
-id="assists">
-0
-</div>
-
-<div class="quick-label">
-ASSISTS
-</div>
-
-</div>
-
-<div class="quick-box">
-
-<div class="quick-number"
-id="cleansheets">
-0
-</div>
-
-<div class="quick-label">
-CLEAN SHEETS
-</div>
-
-</div>
-
-</div>
-
-<!-- VALUE -->
-<div class="value-card">
-
-<div class="value-title">
+<div class="stat-title">
 MARKET VALUE
 </div>
 
-<div class="value-number"
+<div class="stat-big"
 id="value">
 £0
+</div>
+
 </div>
 
 </div>
@@ -423,6 +407,14 @@ id="progressFill">
 
 </div>
 
+<div class="progress-bottom">
+
+<div>0 pts</div>
+
+<div>20 pts</div>
+
+</div>
+
 </div>
 
 <!-- SHARE -->
@@ -431,35 +423,98 @@ class="share-btn"
 onclick="copyLink()">
 
 <i class="fa-solid fa-link"></i>
-Copy Profile Link
+Copy link to this card
 
 </button>
 
-<!-- EXTRA -->
-<div class="extra-stats">
+<!-- TABS -->
+<div class="tabs">
 
-<div class="extra-box">
-
-<div class="extra-title">
-BLOCKS
+<div class="tab active-tab">
+Profile
 </div>
 
-<div class="extra-number"
+<div class="tab">
+Stats
+</div>
+
+<div class="tab">
+Clips
+</div>
+
+<div class="tab">
+Career
+</div>
+
+</div>
+
+<!-- STATS -->
+<div class="stats-grid">
+
+<div class="stat-box">
+
+<div class="stat-small">
+GOALS
+</div>
+
+<div class="stat-number"
+id="goals">
+0
+</div>
+
+<div class="stat-desc">
+0 G+A combined
+</div>
+
+</div>
+
+<div class="stat-box">
+
+<div class="stat-small">
+ASSISTS
+</div>
+
+<div class="stat-number"
+id="assists">
+0
+</div>
+
+<div class="stat-desc">
+0 ast/goal ratio
+</div>
+
+</div>
+
+<div class="stat-box">
+
+<div class="stat-small">
+CLEAN SHEETS
+</div>
+
+<div class="stat-number"
+id="cleansheets">
+0
+</div>
+
+<div class="stat-desc">
+0 matches
+</div>
+
+</div>
+
+<div class="stat-box">
+
+<div class="stat-small">
+ALL-TIME PTS
+</div>
+
+<div class="stat-number"
 id="blocks">
 0
 </div>
 
-</div>
-
-<div class="extra-box">
-
-<div class="extra-title">
-ALL-TIME PTS
-</div>
-
-<div class="extra-number"
-id="alltime">
-0
+<div class="stat-desc">
+RPSG career
 </div>
 
 </div>
@@ -472,8 +527,6 @@ id="alltime">
 
 <script>
 
-/* URL */
-
 const params =
 new URLSearchParams(window.location.search);
 
@@ -482,13 +535,10 @@ decodeURIComponent(
 params.get("name") || "Unknown"
 );
 
-/* DATA */
-
 const player =
 players[playerName] || {
 
 rank:"Bronze I",
-position:"Player",
 points:0,
 goals:0,
 assists:0,
@@ -498,7 +548,7 @@ value:"£0"
 
 };
 
-/* LOAD */
+/* LOAD PLAYER */
 
 document.getElementById("playerName")
 .textContent = playerName;
@@ -515,6 +565,10 @@ document.getElementById("points")
 .textContent =
 player.points;
 
+document.getElementById("value")
+.textContent =
+player.value;
+
 document.getElementById("goals")
 .textContent =
 player.goals;
@@ -523,21 +577,13 @@ document.getElementById("assists")
 .textContent =
 player.assists;
 
-document.getElementById("cleansheets")
-.textContent =
-player.cleansheets;
-
 document.getElementById("blocks")
 .textContent =
 player.blocks;
 
-document.getElementById("alltime")
+document.getElementById("cleansheets")
 .textContent =
-player.points;
-
-document.getElementById("value")
-.textContent =
-player.value;
+player.cleansheets;
 
 /* PROGRESS */
 
