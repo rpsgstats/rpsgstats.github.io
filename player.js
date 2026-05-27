@@ -1,333 +1,54 @@
-const players = {
 
-"l1ght": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
+const players = [
 
-"ado": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
+".astroflow!",
+"ado",
+"adrian",
+"ammar",
+"AntonioTheSt.",
+"Arditaaaa",
+"ATOMIC",
+"batata jr",
+"bebeh=sumo",
+"Brody",
+"ccxze",
+"chico",
+"DEVVYSNTNXVA",
+"diablo.tg",
+"DM.Vrfs",
+"Dutch.",
+"el bicho",
+"ET9",
+"Fart poo 42",
+"Foden",
+"Ghost=Him",
+"Goob",
+"Hybrid9111",
+"Hyper. Vrfs pro",
+"inzagi",
+"JB-KAFZ",
+"Joshwini",
+"JT.vrfs",
+"Kylian mbappe",
+"Luki",
+"Lucas",
+"l1ght",
+"MEMOPRIMEWC",
+"qmxrk",
+"rifleken",
+"Saiku",
+"sky",
+"slax",
+"Snowzzz",
+"sweatyballs.VRFS",
+"type",
+"vinassotuff",
+"Vortex",
+"wokethecm.",
+"xd234jsjs",
+"Yamal?",
+"ZanzTG",
+"ZZZ",
+"Zta."
 
-"adrian": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"ammar": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-".astroflow!": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Fart poo 42": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"sweatyballs.VRFS": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Luki": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"ccxze": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"bebeh=sumo": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"batata jr": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"diablo.tg": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"DM.Vrfs": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Dutch.": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"chico": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"vinassotuff": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Arditaaaa": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Zta.": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Goob": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"el bicho": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Hybrid9111": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Hyper. Vrfs pro": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Brody": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"JB-KAFZ": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"JT.vrfs": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"RPSG CB",
-link:"#"
-},
-
-"ZZZ": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Kylian mbappe": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"Lucas": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-},
-
-"ET9": {
-rank:"Bronze I",
-points:0,
-goals:0,
-assists:0,
-rating:0,
-value:"£0",
-bio:"No bio yet.",
-link:"#"
-}
-
-};
-<div class="bio-section">
-
-<div id="playerBio" class="player-bio"></div>
-
-<a id="playerLink"
-target="_blank"
-class="player-link">
-Visit Link
-</a>
-
-</div>
+];
