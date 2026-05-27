@@ -38,6 +38,11 @@ margin-bottom:25px;
 color:#888;
 text-decoration:none;
 font-size:15px;
+transition:0.3s;
+}
+
+.back-btn:hover{
+color:white;
 }
 
 /* MAIN CARD */
@@ -365,9 +370,12 @@ id="cleansheets">
 
 </div>
 
+<!-- PLAYER DATABASE -->
 <script src="players.js"></script>
 
 <script>
+
+/* GET PLAYER NAME */
 
 const params =
 new URLSearchParams(window.location.search);
@@ -375,15 +383,31 @@ new URLSearchParams(window.location.search);
 const playerName =
 params.get("name");
 
+/* FALLBACK PLAYER */
+
 const player =
-players[playerName];
+players[playerName] || {
+
+rank:"Bronze I",
+points:0,
+goals:0,
+assists:0,
+blocks:0,
+cleansheets:0,
+value:"£0"
+
+};
+
+/* LOAD DATA */
 
 document.getElementById("playerName")
-.innerText = playerName;
+.innerText = playerName || "Unknown Player";
 
 document.getElementById("profilePic")
 .innerText =
-playerName.substring(0,2).toUpperCase();
+(playerName || "??")
+.substring(0,2)
+.toUpperCase();
 
 document.getElementById("playerRank")
 .innerText = player.rank;
@@ -405,6 +429,8 @@ document.getElementById("blocks")
 
 document.getElementById("cleansheets")
 .innerText = player.cleansheets;
+
+/* COPY LINK */
 
 function copyLink(){
 
