@@ -1,1 +1,29 @@
 
+/* BIO */
+.bio-section{
+    margin-top:30px;
+}
+
+.player-bio{
+    opacity:0.75;
+    line-height:1.6;
+    font-size:15px;
+}
+
+/* LINK BUTTON */
+.player-link{
+    display:inline-block;
+    margin-top:18px;
+    background:white;
+    color:black;
+    padding:12px 22px;
+    border-radius:18px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.player-link:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,255,255,0.25);
+}
