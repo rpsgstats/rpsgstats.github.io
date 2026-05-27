@@ -3,37 +3,150 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
 <title>Player Profile</title>
 
-<link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<script defer src="players.js"></script>
-<script defer src="script.js"></script>
+<style>
+
+body{
+background:#050505;
+color:white;
+font-family:Arial,sans-serif;
+padding:20px;
+}
+
+.profile-card{
+background:#111;
+border-radius:30px;
+padding:30px;
+max-width:700px;
+margin:auto;
+}
+
+.big-name{
+font-size:48px;
+font-weight:bold;
+}
+
+.rank{
+margin-top:10px;
+display:inline-block;
+background:#2a2a2a;
+padding:8px 14px;
+border-radius:16px;
+color:#d8ab6d;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:30px;
+}
+
+.stat-card{
+background:#0c0c0c;
+padding:25px;
+border-radius:24px;
+}
+
+.stat-title{
+color:#777;
+font-size:13px;
+}
+
+.stat-number{
+font-size:42px;
+font-weight:bold;
+margin-top:8px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:20px;
+color:#888;
+text-decoration:none;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="player-page">
-
-<a href="index.html"
-class="back-btn">
-
-<i class="fa-solid fa-arrow-left"></i>
-Back
-
+<a href="index.html" class="back">
+← Back
 </a>
 
-<div id="profileContainer"></div>
+<div class="profile-card">
+
+<div class="big-name"
+id="playerName">
+</div>
+
+<div class="rank">
+Bronze I
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<div class="stat-title">
+GOALS
+</div>
+<div class="stat-number">
+0
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-title">
+ASSISTS
+</div>
+<div class="stat-number">
+0
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-title">
+BLOCKS
+</div>
+<div class="stat-number">
+0
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-title">
+CLEAN SHEETS
+</div>
+<div class="stat-number">
+0
+</div>
+</div>
 
 </div>
+
+</div>
+
+<script>
+
+const params =
+new URLSearchParams(window.location.search);
+
+const player =
+params.get("name");
+
+document.getElementById("playerName")
+.innerText = player;
+
+</script>
 
 </body>
 </html>
