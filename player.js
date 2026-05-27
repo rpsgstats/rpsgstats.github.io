@@ -52,36 +52,5 @@ const players = [
 "Zta."
 
 ];
-<!DOCTYPE html>
-<html lang="en">
-<head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Player Profile</title>
-
-<link rel="stylesheet" href="style.css">
-
-<script defer src="players.js"></script>
-<script defer src="script.js"></script>
-
-</head>
-
-<body>
-
-<div class="player-page">
-
-<a href="index.html"
-class="back-btn">
-← Back
-</a>
-
-<div id="profileContainer"></div>
-
-</div>
-
-</body>
 </html>
