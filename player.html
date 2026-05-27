@@ -3,11 +3,10 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Player Profile</title>
+<title>RPSG Player</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -25,54 +24,34 @@ body{
 background:#050505;
 color:white;
 padding:20px;
-overflow-x:hidden;
-}
-
-/* BACK BUTTON */
-
-.back-btn{
-display:inline-flex;
-align-items:center;
-gap:10px;
-margin-bottom:25px;
-color:#888;
-text-decoration:none;
-font-size:15px;
-transition:0.3s;
-}
-
-.back-btn:hover{
-color:white;
 }
 
 /* MAIN CARD */
 
 .profile-card{
-background:#111;
-border:1px solid rgba(255,255,255,0.06);
-border-radius:36px;
-padding:30px;
-max-width:750px;
+max-width:700px;
 margin:auto;
-box-shadow:0 0 30px rgba(255,255,255,0.03);
+background:linear-gradient(180deg,#111,#0b0b0b);
+border-radius:34px;
+padding:28px;
+border:1px solid rgba(255,255,255,0.05);
 }
 
 /* TOP */
 
-.top-profile{
+.top{
 display:flex;
-align-items:center;
-gap:22px;
-flex-wrap:wrap;
+align-items:flex-start;
+gap:20px;
 }
 
-/* PROFILE PICTURE */
+/* PFP */
 
-.profile-pic{
-width:110px;
-height:110px;
-border-radius:28px;
-background:linear-gradient(135deg,#2a2a2a,#111);
+.pfp{
+width:90px;
+height:90px;
+border-radius:24px;
+background:linear-gradient(135deg,#8b5cf6,#a855f7);
 display:flex;
 align-items:center;
 justify-content:center;
@@ -80,44 +59,21 @@ font-size:34px;
 font-weight:bold;
 }
 
-/* NAME */
+/* INFO */
 
-.big-name{
-font-size:48px;
+.player-name{
+font-size:42px;
 font-weight:bold;
-line-height:1;
 }
 
-/* RANK */
-
-.player-rank{
-margin-top:12px;
+.rank{
 display:inline-block;
+margin-top:10px;
 background:#2a2a2a;
-padding:9px 16px;
-border-radius:18px;
-color:#d8ab6d;
-font-size:14px;
-font-weight:bold;
-}
-
-/* SHARE BUTTON */
-
-.share-btn{
-margin-top:18px;
-background:white;
-color:black;
-border:none;
-padding:13px 18px;
-border-radius:18px;
-font-weight:bold;
-font-size:14px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.share-btn:hover{
-transform:translateY(-3px);
+padding:8px 14px;
+border-radius:16px;
+font-size:13px;
+color:#d1d1d1;
 }
 
 /* TAGS */
@@ -126,96 +82,174 @@ transform:translateY(-3px);
 display:flex;
 gap:10px;
 flex-wrap:wrap;
-margin-top:28px;
+margin-top:18px;
 }
 
 .tag{
 background:#171717;
-padding:10px 15px;
+padding:10px 14px;
 border-radius:18px;
 font-size:13px;
-color:#aaa;
+color:#999;
 display:flex;
 align-items:center;
-gap:8px;
+gap:7px;
 }
 
 /* MAIN STATS */
 
 .main-stats{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
+display:flex;
+justify-content:space-between;
+margin-top:40px;
+padding-bottom:25px;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.stat-label{
+font-size:12px;
+color:#777;
+letter-spacing:1px;
+}
+
+.stat-big{
+font-size:52px;
+font-weight:bold;
+margin-top:6px;
+}
+
+/* PROGRESS */
+
+.progress-section{
+margin-top:24px;
+}
+
+.progress-top{
+display:flex;
+justify-content:space-between;
+margin-bottom:12px;
+}
+
+.progress-title{
+font-size:12px;
+color:#777;
+letter-spacing:1px;
+}
+
+.progress-rank{
+color:#4ade80;
+font-weight:bold;
+font-size:14px;
+}
+
+.progress-bar{
+width:100%;
+height:8px;
+background:#222;
+border-radius:999px;
+overflow:hidden;
+}
+
+.progress-fill{
+width:0%;
+height:100%;
+background:white;
+border-radius:999px;
+}
+
+.progress-bottom{
+display:flex;
+justify-content:space-between;
+margin-top:8px;
+font-size:12px;
+color:#777;
+}
+
+/* SHARE */
+
+.share-btn{
+margin-top:28px;
+width:100%;
+background:#111;
+border:none;
+padding:16px;
+border-radius:18px;
+color:white;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+/* TABS */
+
+.tabs{
+display:flex;
+justify-content:space-around;
 margin-top:30px;
+padding-top:22px;
+border-top:1px solid rgba(255,255,255,0.05);
 }
 
-.big-stat-card{
-background:#0c0c0c;
-padding:26px;
-border-radius:26px;
-}
-
-.stat-title{
+.tab{
 color:#777;
-font-size:13px;
-}
-
-.big-number{
-font-size:46px;
+font-size:14px;
 font-weight:bold;
-margin-top:8px;
 }
 
-/* SMALL STATS */
+.active-tab{
+color:white;
+}
 
-.small-grid{
+/* STATS GRID */
+
+.stats-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:15px;
-margin-top:15px;
+gap:14px;
+margin-top:24px;
 }
 
-.small-card{
-background:#0c0c0c;
-padding:24px;
+.stat-box{
+background:#111;
 border-radius:24px;
+padding:24px;
+border:1px solid rgba(255,255,255,0.04);
 }
 
-.small-title{
+.stat-small{
+font-size:12px;
 color:#777;
-font-size:13px;
+letter-spacing:1px;
 }
 
-.small-number{
-font-size:42px;
+.stat-number{
+font-size:52px;
 font-weight:bold;
-margin-top:8px;
+margin-top:10px;
+}
+
+.stat-desc{
+margin-top:10px;
+font-size:13px;
+color:#777;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-.profile-card{
-padding:24px;
-}
-
-.big-name{
+.player-name{
 font-size:34px;
 }
 
 .main-stats{
-grid-template-columns:1fr;
+flex-direction:column;
+gap:25px;
 }
 
-.small-grid{
+.stats-grid{
 grid-template-columns:1fr;
-}
-
-.profile-pic{
-width:90px;
-height:90px;
-font-size:28px;
 }
 
 }
@@ -226,49 +260,25 @@ font-size:28px;
 
 <body>
 
-<a href="index.html"
-class="back-btn">
-
-<i class="fa-solid fa-arrow-left"></i>
-Back
-
-</a>
-
 <div class="profile-card">
 
 <!-- TOP -->
-<div class="top-profile">
+<div class="top">
 
-<div class="profile-pic"
+<div class="pfp"
 id="profilePic">
 </div>
 
 <div>
 
-<div class="big-name"
+<div class="player-name"
 id="playerName">
-Loading...
 </div>
 
-<div class="player-rank"
+<div class="rank"
 id="playerRank">
-Bronze I
 </div>
 
-<button
-class="share-btn"
-onclick="copyLink()">
-
-<i class="fa-solid fa-link"></i>
-Copy Profile Link
-
-</button>
-
-</div>
-
-</div>
-
-<!-- TAGS -->
 <div class="tags">
 
 <div class="tag">
@@ -277,40 +287,44 @@ Player
 </div>
 
 <div class="tag">
-<i class="fa-solid fa-earth-americas"></i>
+<i class="fa-solid fa-location-dot"></i>
 NA
 </div>
 
 <div class="tag">
-<i class="fa-solid fa-trophy"></i>
+<i class="fa-solid fa-flag"></i>
 RPSG
 </div>
 
 </div>
 
-<!-- BIG STATS -->
+</div>
+
+</div>
+
+<!-- MAIN STATS -->
 <div class="main-stats">
 
-<div class="big-stat-card">
+<div>
 
-<div class="stat-title">
+<div class="stat-label">
 POINTS
 </div>
 
-<div class="big-number"
+<div class="stat-big"
 id="points">
 0
 </div>
 
 </div>
 
-<div class="big-stat-card">
+<div>
 
-<div class="stat-title">
+<div class="stat-label">
 MARKET VALUE
 </div>
 
-<div class="big-number"
+<div class="stat-big"
 id="value">
 £0
 </div>
@@ -319,81 +333,156 @@ id="value">
 
 </div>
 
-<!-- SMALL STATS -->
-<div class="small-grid">
+<!-- PROGRESS -->
+<div class="progress-section">
 
-<div class="small-card">
+<div class="progress-top">
 
-<div class="small-title">
+<div class="progress-title">
+RANK PROGRESS
+</div>
+
+<div class="progress-rank">
+20 pts to Bronze II
+</div>
+
+</div>
+
+<div class="progress-bar">
+
+<div class="progress-fill"
+id="progressFill">
+</div>
+
+</div>
+
+<div class="progress-bottom">
+
+<div>0 pts</div>
+
+<div>20 pts</div>
+
+</div>
+
+</div>
+
+<!-- SHARE -->
+<button
+class="share-btn"
+onclick="copyLink()">
+
+<i class="fa-solid fa-link"></i>
+Copy link to this card
+
+</button>
+
+<!-- TABS -->
+<div class="tabs">
+
+<div class="tab active-tab">
+Profile
+</div>
+
+<div class="tab">
+Stats
+</div>
+
+<div class="tab">
+Clips
+</div>
+
+<div class="tab">
+Career
+</div>
+
+</div>
+
+<!-- STATS -->
+<div class="stats-grid">
+
+<div class="stat-box">
+
+<div class="stat-small">
 GOALS
 </div>
 
-<div class="small-number"
+<div class="stat-number"
 id="goals">
 0
 </div>
 
+<div class="stat-desc">
+0 G+A combined
 </div>
 
-<div class="small-card">
+</div>
 
-<div class="small-title">
+<div class="stat-box">
+
+<div class="stat-small">
 ASSISTS
 </div>
 
-<div class="small-number"
+<div class="stat-number"
 id="assists">
 0
 </div>
 
-</div>
-
-<div class="small-card">
-
-<div class="small-title">
-BLOCKS
-</div>
-
-<div class="small-number"
-id="blocks">
-0
+<div class="stat-desc">
+0 ast/goal ratio
 </div>
 
 </div>
 
-<div class="small-card">
+<div class="stat-box">
 
-<div class="small-title">
+<div class="stat-small">
 CLEAN SHEETS
 </div>
 
-<div class="small-number"
+<div class="stat-number"
 id="cleansheets">
 0
 </div>
 
+<div class="stat-desc">
+0 matches
+</div>
+
+</div>
+
+<div class="stat-box">
+
+<div class="stat-small">
+ALL-TIME PTS
+</div>
+
+<div class="stat-number"
+id="blocks">
+0
+</div>
+
+<div class="stat-desc">
+RPSG career
 </div>
 
 </div>
 
 </div>
 
-<!-- PLAYER DATABASE -->
+</div>
+
 <script src="players.js"></script>
 
 <script>
-
-/* GET PLAYER NAME FROM URL */
 
 const params =
 new URLSearchParams(window.location.search);
 
 const playerName =
 decodeURIComponent(
-params.get("name") || "Unknown Player"
+params.get("name") || "Unknown"
 );
-
-/* GET PLAYER DATA */
 
 const player =
 players[playerName] || {
@@ -407,8 +496,6 @@ cleansheets:0,
 value:"£0"
 
 };
-
-/* LOAD PLAYER INFO */
 
 document.getElementById("playerName")
 .textContent = playerName;
@@ -445,7 +532,16 @@ document.getElementById("cleansheets")
 .textContent =
 player.cleansheets;
 
-/* COPY PROFILE LINK */
+/* PROGRESS BAR */
+
+let progress =
+(player.points / 20) * 100;
+
+document.getElementById("progressFill")
+.style.width =
+progress + "%";
+
+/* SHARE */
 
 function copyLink(){
 
