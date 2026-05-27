@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 
 <meta charset="UTF-8">
@@ -8,7 +7,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>RPSG Player Stats</title>
+<title>RPSG Stats</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -19,13 +18,50 @@ content="width=device-width, initial-scale=1.0">
 
 <body>
 
+<!-- BACKGROUND GLOW -->
 <div class="bg-glow"></div>
 
 <!-- TOP BAR -->
 <div class="top-bar">
 
-<h1 class="logo">
-RPSG
-</h1>
+    <div class="logo">
+        RPSG
+    </div>
 
-<input
+    <input
+    type="text"
+    id="search"
+    class="search"
+    placeholder="Search players...">
+
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+    <h1>
+        RPSG Player Stats
+    </h1>
+
+    <p>
+        Track ranks, goals, ratings, and player profiles.
+    </p>
+
+</div>
+
+<!-- PLAYER SECTION -->
+<div class="players-section">
+
+    <h2 class="section-title">
+        Players
+    </h2>
+
+    <div class="player-grid"
+    id="playerGrid">
+
+    </div>
+
+</div>
+
+</body>
+</html>
