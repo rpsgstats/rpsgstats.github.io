@@ -86,7 +86,8 @@ player.substring(0,2).toUpperCase();
 
 playerList.innerHTML += `
 
-<div class="player-card">
+<div class="player-card"
+onclick="window.location='player.html?name=${encodeURIComponent(player)}'">
 
 <div class="player-left">
 
