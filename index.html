@@ -3,10 +3,11 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>RPSG Stats</title>
+<title>RPSG Player</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,278 +24,357 @@ font-family:Arial,sans-serif;
 body{
 background:#050505;
 color:white;
+padding:14px;
 overflow-x:hidden;
 }
 
-/* MAIN */
+/* TOP BAR */
 
-.container{
-padding:25px 18px 120px;
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:18px;
+}
+
+.top-btn{
+width:46px;
+height:46px;
+border-radius:50%;
+background:#111;
+border:1px solid rgba(255,255,255,0.05);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#aaa;
+cursor:pointer;
+}
+
+.site-name{
+font-weight:bold;
+font-size:20px;
+}
+
+/* MAIN CARD */
+
+.profile-card{
+
 max-width:700px;
 margin:auto;
+
+background:
+linear-gradient(
+180deg,
+rgba(12,12,12,0.98),
+rgba(5,5,5,1)
+);
+
+border-radius:34px;
+padding:24px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:
+
+0 0 20px rgba(255,255,255,0.03),
+0 0 60px rgba(80,120,255,0.03),
+
+inset 0 1px 1px rgba(255,255,255,0.02);
+
+backdrop-filter:blur(12px);
 }
 
 /* TOP */
 
 .top{
 display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.top h1{
-font-size:52px;
-font-weight:bold;
-letter-spacing:-2px;
-}
-
-/* LOCK */
-
-.lock-btn{
-width:48px;
-height:48px;
-background:#101010;
-border-radius:16px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#777;
-border:1px solid rgba(255,255,255,0.05);
-}
-
-/* SEARCH */
-
-.search-box{
-margin-top:24px;
-position:relative;
-}
-
-.search-icon{
-position:absolute;
-left:18px;
-top:18px;
-color:#666;
-font-size:18px;
-}
-
-.search-box input{
-width:100%;
-background:#111;
-border:1px solid rgba(255,255,255,0.05);
-border-radius:20px;
-padding:18px 18px 18px 50px;
-color:white;
-font-size:16px;
-outline:none;
-transition:0.3s;
-}
-
-.search-box input:focus{
-border-color:rgba(210,150,90,0.18);
-box-shadow:
-0 0 14px rgba(180,120,60,0.08);
-}
-
-/* PLAYER LIST */
-
-#playerList{
-margin-top:12px;
-}
-
-/* PLAYER CARD */
-
-.player-card{
-background:
-linear-gradient(
-180deg,
-rgba(55,35,20,0.88),
-rgba(18,12,8,0.96)
-);
-border-radius:30px;
-padding:20px;
-margin-top:18px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-cursor:pointer;
-transition:0.3s;
-border:1px solid rgba(210,150,90,0.10);
-box-shadow:
-0 0 18px rgba(180,120,60,0.05),
-inset 0 1px 1px rgba(255,255,255,0.02);
-}
-
-.player-card:hover{
-transform:translateY(-4px);
-border-color:rgba(210,150,90,0.20);
-box-shadow:
-0 0 28px rgba(180,120,60,0.12),
-inset 0 1px 1px rgba(255,255,255,0.03);
-}
-
-/* LEFT */
-
-.player-left{
-display:flex;
-align-items:center;
-gap:16px;
+align-items:flex-start;
+gap:18px;
 }
 
 /* PFP */
 
-.player-pfp{
-width:64px;
-height:64px;
-border-radius:18px;
+.pfp{
+width:86px;
+height:86px;
+border-radius:24px;
 background:linear-gradient(145deg,#2a2a2a,#0f0f0f);
 border:1px solid rgba(255,255,255,0.08);
 display:flex;
 align-items:center;
 justify-content:center;
-font-weight:700;
-font-size:22px;
-color:#ffffff;
-box-shadow:
-0 0 12px rgba(255,255,255,0.03),
-inset 0 1px 1px rgba(255,255,255,0.04);
-transition:0.3s;
-}
-
-.player-card:hover .player-pfp{
-transform:scale(1.04);
-border-color:rgba(255,255,255,0.15);
+font-size:28px;
+font-weight:bold;
+color:white;
 }
 
 /* NAME */
 
 .player-name{
-font-size:21px;
+font-size:38px;
 font-weight:bold;
+line-height:1;
+margin-top:4px;
 }
 
-/* ROW */
-
-.player-row{
-display:flex;
-gap:8px;
-margin-top:7px;
-align-items:center;
-flex-wrap:wrap;
-}
-
-/* BRONZE RANK */
+/* BRONZE TAG */
 
 .rank{
-background:linear-gradient(
+
+display:inline-block;
+
+margin-top:10px;
+
+background:
+linear-gradient(
 145deg,
-rgba(180,120,60,0.25),
-rgba(90,55,25,0.18)
+rgba(180,120,60,0.18),
+rgba(90,55,25,0.14)
 );
-border:1px solid rgba(210,150,90,0.18);
+
+border:1px solid rgba(210,150,90,0.14);
+
 color:#d6b08a;
-padding:5px 11px;
-border-radius:14px;
+
+padding:7px 14px;
+
+border-radius:16px;
+
 font-size:12px;
 font-weight:600;
-backdrop-filter:blur(6px);
-box-shadow:
-0 0 8px rgba(180,120,60,0.08),
-inset 0 1px 1px rgba(255,255,255,0.03);
-transition:0.3s;
+
 }
 
-.player-card:hover .rank{
-transform:translateY(-1px);
-box-shadow:
-0 0 14px rgba(180,120,60,0.14),
-inset 0 1px 1px rgba(255,255,255,0.04);
+/* TAGS */
+
+.tags{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-top:14px;
 }
 
-/* POSITION */
-
-.position{
-font-size:14px;
-color:#b68f6b;
-}
-
-/* STATS */
-
-.player-stats{
-margin-top:7px;
-font-size:13px;
-color:#a48a74;
-}
-
-/* RIGHT */
-
-.player-right{
-text-align:right;
-}
-
-.points{
-font-size:30px;
-font-weight:bold;
-color:#fff;
-}
-
-.pts{
+.tag{
+background:#101010;
+border:1px solid rgba(255,255,255,0.05);
+padding:9px 13px;
+border-radius:16px;
 font-size:12px;
-color:#9a7d64;
-margin-top:2px;
+color:#888;
+display:flex;
+align-items:center;
+gap:6px;
 }
 
-/* BOTTOM NAV */
+/* MAIN STATS */
 
-.bottom-nav{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#090909;
+.main-stats{
+display:flex;
+justify-content:space-between;
+margin-top:28px;
+padding-top:24px;
 border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.stat-title{
+font-size:12px;
+letter-spacing:1px;
+color:#777;
+}
+
+.stat-big{
+font-size:52px;
+font-weight:bold;
+margin-top:6px;
+}
+
+/* PROGRESS */
+
+.progress-section{
+margin-top:24px;
+}
+
+.progress-top{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+}
+
+.progress-title{
+font-size:12px;
+color:#777;
+}
+
+.progress-rank{
+font-size:13px;
+font-weight:bold;
+color:white;
+}
+
+.progress-bar{
+width:100%;
+height:8px;
+background:#161616;
+border-radius:999px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress-fill{
+width:40%;
+height:100%;
+background:white;
+border-radius:999px;
+}
+
+.progress-bottom{
+display:flex;
+justify-content:space-between;
+margin-top:8px;
+font-size:12px;
+color:#666;
+}
+
+/* SHARE */
+
+.share-btn{
+margin-top:22px;
+width:100%;
+background:#111;
+border:none;
+padding:16px;
+border-radius:18px;
+color:white;
+font-weight:bold;
+font-size:15px;
+cursor:pointer;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+/* TABS */
+
+.tabs{
 display:flex;
 justify-content:space-around;
-padding:14px 0;
-backdrop-filter:blur(10px);
+margin-top:28px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.05);
 }
 
-.nav-item{
-text-align:center;
-color:#777;
-font-size:13px;
+.tab{
+color:#666;
+font-size:14px;
 font-weight:bold;
+position:relative;
 }
 
-.nav-item i{
-display:block;
-font-size:18px;
-margin-bottom:6px;
+.active-tab{
+color:white;
 }
 
-.active{
-color:#d6b08a;
+.active-tab::after{
+content:"";
+position:absolute;
+bottom:-12px;
+left:0;
+width:100%;
+height:2px;
+background:white;
+border-radius:999px;
+}
+
+/* GRID */
+
+.stats-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+margin-top:28px;
+}
+
+/* BOX */
+
+.stat-box{
+
+background:
+linear-gradient(
+180deg,
+rgba(12,12,12,0.96),
+rgba(5,5,5,1)
+);
+
+border-radius:24px;
+padding:22px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:
+0 0 12px rgba(255,255,255,0.02);
+
+transition:0.25s;
+}
+
+.stat-box:hover{
+
+transform:translateY(-2px);
+
+border-color:
+rgba(255,255,255,0.08);
+
+box-shadow:
+0 0 20px rgba(255,255,255,0.04);
+
+}
+
+/* SMALL TITLE */
+
+.stat-small{
+font-size:12px;
+color:#777;
+letter-spacing:1px;
+}
+
+/* NUMBER */
+
+.stat-number{
+font-size:52px;
+font-weight:800;
+margin-top:10px;
+line-height:1;
+}
+
+/* DESC */
+
+.stat-desc{
+margin-top:10px;
+font-size:13px;
+color:#777;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-.top h1{
-font-size:44px;
-}
-
 .player-name{
-font-size:19px;
+font-size:30px;
 }
 
-.player-card{
-padding:18px;
+.pfp{
+width:78px;
+height:78px;
+font-size:24px;
 }
 
-.player-pfp{
-width:58px;
-height:58px;
-font-size:20px;
+.stat-big{
+font-size:42px;
+}
+
+.stat-number{
+font-size:42px;
+}
+
+.stats-grid{
+gap:12px;
 }
 
 }
@@ -305,156 +385,323 @@ font-size:20px;
 
 <body>
 
-<div class="container">
+<!-- TOP BAR -->
+<div class="topbar">
+
+<div class="top-btn"
+onclick="window.location.href='index.html'">
+
+<i class="fa-solid fa-xmark"></i>
+
+</div>
+
+<div class="site-name">
+rpsg.app
+</div>
+
+<div class="top-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+</div>
+
+<!-- PROFILE CARD -->
+<div class="profile-card">
 
 <!-- TOP -->
 <div class="top">
 
-<h1>Roster</h1>
-
-<div class="lock-btn">
-<i class="fa-solid fa-lock"></i>
-</div>
-
-</div>
-
-<!-- SEARCH -->
-<div class="search-box">
-
-<i class="fa-solid fa-magnifying-glass search-icon"></i>
-
-<input
-type="text"
-id="search"
-placeholder="Search players...">
-
-</div>
-
-<!-- PLAYERS -->
-<div id="playerList"></div>
-
-</div>
-
-<!-- BOTTOM NAV -->
-<div class="bottom-nav">
-
-<div class="nav-item active">
-<i class="fa-solid fa-users"></i>
-Roster
-</div>
-
-<div class="nav-item">
-<i class="fa-solid fa-chart-simple"></i>
-Rankings
-</div>
-
-</div>
-
-<!-- DATABASE -->
-<script src="players.js"></script>
-
-<script>
-
-const playerList =
-document.getElementById("playerList");
-
-/* LOAD PLAYERS */
-
-Object.keys(players).forEach(player => {
-
-const data =
-players[player];
-
-const initials =
-player.substring(0,2).toUpperCase();
-
-playerList.innerHTML += `
-
-<div class="player-card"
-onclick="window.location.href='player.html?name=${encodeURIComponent(player)}'">
-
-<div class="player-left">
-
-<div class="player-pfp">
-${initials}
+<div class="pfp"
+id="profilePic">
 </div>
 
 <div>
 
-<div class="player-name">
-${player}
+<div class="player-name"
+id="playerName">
+Loading...
 </div>
 
-<div class="player-row">
-
-<div class="rank">
-${data.rank}
+<div class="rank"
+id="playerRank">
+Bronze I
 </div>
 
-<div class="position">
-${data.position}
+<div class="tags">
+
+<div class="tag">
+<i class="fa-regular fa-futbol"></i>
+Player
 </div>
 
+<div class="tag">
+<i class="fa-solid fa-location-dot"></i>
+NA
 </div>
 
-<div class="player-stats">
-
-${data.goals}G •
-${data.assists}A •
-${data.blocks}B •
-${data.cleansheets}CS
-
-</div>
-
-</div>
-
-</div>
-
-<div class="player-right">
-
-<div class="points">
-${data.points}
-</div>
-
-<div class="pts">
-PTS
+<div class="tag">
+<i class="fa-regular fa-flag"></i>
+RPSG
 </div>
 
 </div>
 
 </div>
 
-`;
+</div>
 
-});
+<!-- MAIN STATS -->
+<div class="main-stats">
 
-/* SEARCH */
+<div>
 
-document.getElementById("search")
-.addEventListener("input",e=>{
+<div class="stat-title">
+POINTS
+</div>
 
-let value =
-e.target.value.toLowerCase();
+<div class="stat-big"
+id="points">
+0
+</div>
 
-let cards =
-document.querySelectorAll(".player-card");
+</div>
 
-cards.forEach(card=>{
+<div>
 
-let name =
-card.querySelector(".player-name")
-.innerText.toLowerCase();
+<div class="stat-title">
+MARKET VALUE
+</div>
 
-if(name.includes(value)){
-card.style.display="flex";
+<div class="stat-big"
+id="value">
+£0
+</div>
+
+</div>
+
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-section">
+
+<div class="progress-top">
+
+<div class="progress-title">
+RANK PROGRESS
+</div>
+
+<div class="progress-rank">
+20 pts to Bronze II
+</div>
+
+</div>
+
+<div class="progress-bar">
+
+<div class="progress-fill"
+id="progressFill">
+</div>
+
+</div>
+
+<div class="progress-bottom">
+
+<div>0 pts</div>
+
+<div>20 pts</div>
+
+</div>
+
+</div>
+
+<!-- SHARE -->
+<button
+class="share-btn"
+onclick="copyLink()">
+
+<i class="fa-solid fa-link"></i>
+Copy link to this card
+
+</button>
+
+<!-- TABS -->
+<div class="tabs">
+
+<div class="tab active-tab">
+Profile
+</div>
+
+<div class="tab">
+Stats
+</div>
+
+<div class="tab">
+Clips
+</div>
+
+<div class="tab">
+Career
+</div>
+
+</div>
+
+<!-- STATS -->
+<div class="stats-grid">
+
+<div class="stat-box">
+
+<div class="stat-small">
+GOALS
+</div>
+
+<div class="stat-number"
+id="goals">
+0
+</div>
+
+<div class="stat-desc">
+0 G+A combined
+</div>
+
+</div>
+
+<div class="stat-box">
+
+<div class="stat-small">
+ASSISTS
+</div>
+
+<div class="stat-number"
+id="assists">
+0
+</div>
+
+<div class="stat-desc">
+0 ast/goal ratio
+</div>
+
+</div>
+
+<div class="stat-box">
+
+<div class="stat-small">
+CLEAN SHEETS
+</div>
+
+<div class="stat-number"
+id="cleansheets">
+0
+</div>
+
+<div class="stat-desc">
+0 matches
+</div>
+
+</div>
+
+<div class="stat-box">
+
+<div class="stat-small">
+ALL-TIME PTS
+</div>
+
+<div class="stat-number"
+id="blocks">
+0
+</div>
+
+<div class="stat-desc">
+RPSG career
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="players.js"></script>
+
+<script>
+
+const params =
+new URLSearchParams(window.location.search);
+
+const playerName =
+decodeURIComponent(
+params.get("name") || "Unknown"
+);
+
+const player =
+players[playerName] || {
+
+rank:"Bronze I",
+points:0,
+goals:0,
+assists:0,
+blocks:0,
+cleansheets:0,
+value:"£0"
+
+};
+
+/* LOAD PLAYER */
+
+document.getElementById("playerName")
+.textContent = playerName;
+
+document.getElementById("profilePic")
+.textContent =
+playerName.substring(0,2).toUpperCase();
+
+document.getElementById("playerRank")
+.textContent =
+player.rank;
+
+document.getElementById("points")
+.textContent =
+player.points;
+
+document.getElementById("value")
+.textContent =
+player.value;
+
+document.getElementById("goals")
+.textContent =
+player.goals;
+
+document.getElementById("assists")
+.textContent =
+player.assists;
+
+document.getElementById("blocks")
+.textContent =
+player.blocks;
+
+document.getElementById("cleansheets")
+.textContent =
+player.cleansheets;
+
+/* PROGRESS */
+
+let progress =
+(player.points / 20) * 100;
+
+document.getElementById("progressFill")
+.style.width =
+progress + "%";
+
+/* SHARE */
+
+function copyLink(){
+
+navigator.clipboard.writeText(
+window.location.href
+);
+
+alert("Profile link copied!");
+
 }
-else{
-card.style.display="none";
-}
-
-});
-
-});
 
 </script>
 
