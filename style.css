@@ -140,3 +140,29 @@ font-weight:bold;
 color:#777;
 font-size:12px;
 }
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#090909;
+border-top:1px solid rgba(255,255,255,0.06);
+display:flex;
+justify-content:space-around;
+padding:14px 0;
+}
+
+.nav-item{
+text-align:center;
+color:#777;
+font-size:13px;
+}
+
+.nav-item i{
+font-size:18px;
+margin-bottom:6px;
+}
+
+.active{
+color:white;
+}
