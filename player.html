@@ -247,10 +247,12 @@ id="profilePic">
 
 <div class="big-name"
 id="playerName">
+Loading...
 </div>
 
 <div class="player-rank"
 id="playerRank">
+Bronze I
 </div>
 
 <button
@@ -297,6 +299,7 @@ POINTS
 
 <div class="big-number"
 id="points">
+0
 </div>
 
 </div>
@@ -309,6 +312,7 @@ MARKET VALUE
 
 <div class="big-number"
 id="value">
+£0
 </div>
 
 </div>
@@ -326,6 +330,7 @@ GOALS
 
 <div class="small-number"
 id="goals">
+0
 </div>
 
 </div>
@@ -338,6 +343,7 @@ ASSISTS
 
 <div class="small-number"
 id="assists">
+0
 </div>
 
 </div>
@@ -350,6 +356,7 @@ BLOCKS
 
 <div class="small-number"
 id="blocks">
+0
 </div>
 
 </div>
@@ -362,6 +369,7 @@ CLEAN SHEETS
 
 <div class="small-number"
 id="cleansheets">
+0
 </div>
 
 </div>
@@ -375,15 +383,17 @@ id="cleansheets">
 
 <script>
 
-/* GET PLAYER NAME */
+/* GET PLAYER NAME FROM URL */
 
 const params =
 new URLSearchParams(window.location.search);
 
 const playerName =
-params.get("name");
+decodeURIComponent(
+params.get("name") || "Unknown Player"
+);
 
-/* FALLBACK PLAYER */
+/* GET PLAYER DATA */
 
 const player =
 players[playerName] || {
@@ -398,39 +408,44 @@ value:"£0"
 
 };
 
-/* LOAD DATA */
+/* LOAD PLAYER INFO */
 
 document.getElementById("playerName")
-.innerText = playerName || "Unknown Player";
+.textContent = playerName;
 
 document.getElementById("profilePic")
-.innerText =
-(playerName || "??")
-.substring(0,2)
-.toUpperCase();
+.textContent =
+playerName.substring(0,2).toUpperCase();
 
 document.getElementById("playerRank")
-.innerText = player.rank;
+.textContent =
+player.rank;
 
 document.getElementById("points")
-.innerText = player.points;
+.textContent =
+player.points;
 
 document.getElementById("value")
-.innerText = player.value;
+.textContent =
+player.value;
 
 document.getElementById("goals")
-.innerText = player.goals;
+.textContent =
+player.goals;
 
 document.getElementById("assists")
-.innerText = player.assists;
+.textContent =
+player.assists;
 
 document.getElementById("blocks")
-.innerText = player.blocks;
+.textContent =
+player.blocks;
 
 document.getElementById("cleansheets")
-.innerText = player.cleansheets;
+.textContent =
+player.cleansheets;
 
-/* COPY LINK */
+/* COPY PROFILE LINK */
 
 function copyLink(){
 
