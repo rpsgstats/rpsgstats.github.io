@@ -1,3 +1,4 @@
+
 const playerList =
 document.getElementById("playerList");
 
@@ -117,7 +118,7 @@ card.style.display="none";
 
 }
 
-/* PLAYER PROFILE PAGE */
+/* PLAYER PAGE */
 
 const params =
 new URLSearchParams(window.location.search);
@@ -155,15 +156,18 @@ Bronze I
 <div class="tags">
 
 <div class="tag">
-⚽ Player
+<i class="fa-solid fa-futbol"></i>
+Player
 </div>
 
 <div class="tag">
-🌎 NA
+<i class="fa-solid fa-earth-americas"></i>
+NA
 </div>
 
 <div class="tag">
-🏆 RPSG
+<i class="fa-solid fa-trophy"></i>
+RPSG
 </div>
 
 </div>
