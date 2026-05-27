@@ -7,10 +7,216 @@
 
 <title>RPSG Stats</title>
 
-<link rel="stylesheet" href="style.css">
-
+<!-- ICONS -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+}
+
+/* MAIN */
+.container{
+    padding:25px 18px 120px;
+    max-width:700px;
+    margin:auto;
+}
+
+/* TOP */
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top h1{
+    font-size:52px;
+    font-weight:bold;
+}
+
+/* LOCK */
+.lock-btn{
+    width:48px;
+    height:48px;
+    background:#111;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#888;
+}
+
+/* SEARCH */
+.search-box{
+    margin-top:25px;
+    position:relative;
+}
+
+.search-icon{
+    position:absolute;
+    left:18px;
+    top:18px;
+    color:#666;
+}
+
+.search-box input{
+    width:100%;
+    background:#171717;
+    border:none;
+    border-radius:18px;
+    padding:18px 18px 18px 48px;
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+/* PLAYER CARD */
+.player-card{
+    background:#141414;
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:28px;
+    padding:20px;
+    margin-top:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.player-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 20px rgba(255,255,255,0.06);
+}
+
+/* LEFT */
+.player-left{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+/* PFP */
+.player-pfp{
+    width:64px;
+    height:64px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:22px;
+    color:white;
+}
+
+.red{background:#ff4d4d;}
+.blue{background:#29b6f6;}
+.green{background:#2ecc71;}
+.orange{background:#f4a300;}
+.purple{background:#8e5eff;}
+
+/* NAME */
+.player-name{
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* ROW */
+.player-row{
+    margin-top:6px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.rank{
+    background:#2a2a2a;
+    color:#aaa;
+    padding:4px 10px;
+    border-radius:14px;
+    font-size:12px;
+}
+
+.position{
+    color:#888;
+    font-size:14px;
+}
+
+/* STATS */
+.player-stats{
+    margin-top:7px;
+    color:#888;
+    font-size:13px;
+}
+
+/* RIGHT */
+.player-right{
+    text-align:center;
+}
+
+.points{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.pts{
+    color:#777;
+    font-size:12px;
+}
+
+/* BOTTOM NAV */
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#090909;
+    border-top:1px solid rgba(255,255,255,0.06);
+    display:flex;
+    justify-content:space-around;
+    padding:14px 0;
+}
+
+.nav-item{
+    text-align:center;
+    color:#777;
+    font-size:13px;
+}
+
+.nav-item i{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.active{
+    color:white;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.top h1{
+    font-size:42px;
+}
+
+.player-card{
+    padding:18px;
+}
+
+}
+
+</style>
 
 </head>
 
@@ -50,26 +256,188 @@ placeholder="Search players...">
 <div class="bottom-nav">
 
 <div class="nav-item active">
-
 <i class="fa-solid fa-users"></i>
 <br>
 Roster
-
 </div>
 
 <div class="nav-item">
-
 <i class="fa-solid fa-chart-simple"></i>
 <br>
 Rankings
-
 </div>
 
 </div>
 
-<!-- IMPORTANT -->
-<script src="players.js"></script>
-<script src="script.js"></script>
+<script>
+
+const players = [
+
+".astroflow!",
+"ado",
+"adrian",
+"ammar",
+"AntonioTheSt.",
+"Arditaaaa",
+"ATOMIC",
+"batata jr",
+"bebeh=sumo",
+"Brody",
+"ccxze",
+"chico",
+"DEVVYSNTNXVA",
+"diablo.tg",
+"DM.Vrfs",
+"Dutch.",
+"el bicho",
+"ET9",
+"Fart poo 42",
+"Foden",
+"Ghost=Him",
+"Goob",
+"Hybrid9111",
+"Hyper. Vrfs pro",
+"inzagi",
+"JB-KAFZ",
+"Joshwini",
+"JT.vrfs",
+"Kylian mbappe",
+"Luki",
+"Lucas",
+"l1ght",
+"MEMOPRIMEWC",
+"qmxrk",
+"rifleken",
+"Saiku",
+"sky",
+"slax",
+"Snowzzz",
+"sweatyballs.VRFS",
+"type",
+"vinassotuff",
+"Vortex",
+"wokethecm.",
+"xd234jsjs",
+"Yamal?",
+"ZanzTG",
+"ZZZ",
+"Zta."
+
+];
+
+const playerList =
+document.getElementById("playerList");
+
+const colors = [
+"red",
+"blue",
+"green",
+"orange",
+"purple"
+];
+
+const positions = [
+"Goalkeeper",
+"Defender",
+"Midfielder",
+"Attacker",
+"Striker"
+];
+
+players.forEach((player,index)=>{
+
+const color =
+colors[index % colors.length];
+
+const position =
+positions[index % positions.length];
+
+const initials =
+player.substring(0,2).toUpperCase();
+
+playerList.innerHTML += `
+
+<div class="player-card">
+
+<div class="player-left">
+
+<div class="player-pfp ${color}">
+${initials}
+</div>
+
+<div>
+
+<div class="player-name">
+${player}
+</div>
+
+<div class="player-row">
+
+<div class="rank">
+Bronze I
+</div>
+
+<div class="position">
+${position}
+</div>
+
+</div>
+
+<div class="player-stats">
+0G • 0A • 0CS • 0B
+</div>
+
+</div>
+
+</div>
+
+<div class="player-right">
+
+<div class="points">
+0
+</div>
+
+<div class="pts">
+PTS
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+/* SEARCH */
+
+document.getElementById("search")
+.addEventListener("input",e=>{
+
+let value =
+e.target.value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".player-card");
+
+cards.forEach(card=>{
+
+let name =
+card.querySelector(".player-name")
+.innerText.toLowerCase();
+
+if(name.includes(value)){
+card.style.display="flex";
+}
+else{
+card.style.display="none";
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
