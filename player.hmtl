@@ -3,7 +3,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
@@ -27,7 +26,6 @@ color:white;
 padding:20px;
 }
 
-/* BACK BUTTON */
 .back-btn{
 display:inline-flex;
 align-items:center;
@@ -38,7 +36,6 @@ text-decoration:none;
 font-size:15px;
 }
 
-/* PROFILE CARD */
 .profile-card{
 background:#111;
 border-radius:32px;
@@ -48,7 +45,6 @@ margin:auto;
 border:1px solid rgba(255,255,255,0.05);
 }
 
-/* TOP */
 .top-profile{
 display:flex;
 align-items:center;
@@ -56,7 +52,6 @@ gap:20px;
 flex-wrap:wrap;
 }
 
-/* PFP */
 .profile-pic{
 width:100px;
 height:100px;
@@ -69,13 +64,11 @@ font-size:32px;
 font-weight:bold;
 }
 
-/* NAME */
 .big-name{
 font-size:46px;
 font-weight:bold;
 }
 
-/* RANK */
 .player-rank{
 margin-top:10px;
 display:inline-block;
@@ -86,7 +79,6 @@ color:#d8ab6d;
 font-size:14px;
 }
 
-/* TAGS */
 .tags{
 display:flex;
 gap:10px;
@@ -105,7 +97,6 @@ align-items:center;
 gap:8px;
 }
 
-/* MAIN STATS */
 .main-stats{
 display:flex;
 gap:15px;
@@ -130,7 +121,6 @@ font-weight:bold;
 margin-top:8px;
 }
 
-/* SMALL STATS */
 .small-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -155,7 +145,6 @@ font-weight:bold;
 margin-top:8px;
 }
 
-/* MOBILE */
 @media(max-width:768px){
 
 .big-name{
