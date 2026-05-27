@@ -27,7 +27,7 @@ body{
 }
 
 .top h1{
-    font-size:56px;
+    font-size:52px;
     font-weight:bold;
 }
 
@@ -40,12 +40,21 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:20px;
+    font-size:18px;
+    color:#888;
 }
 
 /* SEARCH */
 .search-box{
     margin-top:25px;
+    position:relative;
+}
+
+.search-icon{
+    position:absolute;
+    left:18px;
+    top:18px;
+    color:#666;
 }
 
 .search-box input{
@@ -53,9 +62,9 @@ body{
     background:#171717;
     border:none;
     border-radius:18px;
-    padding:18px;
+    padding:18px 18px 18px 48px;
     color:white;
-    font-size:17px;
+    font-size:16px;
     outline:none;
 }
 
@@ -87,30 +96,31 @@ body{
 
 /* PFP */
 .player-pfp{
-    width:62px;
-    height:62px;
+    width:64px;
+    height:64px;
     border-radius:18px;
     display:flex;
     align-items:center;
     justify-content:center;
     font-weight:bold;
-    font-size:18px;
+    font-size:22px;
     color:white;
 }
 
 /* COLORS */
-.red{background:#ff4747;}
+.red{background:#ff4d4d;}
 .blue{background:#29b6f6;}
 .green{background:#2ecc71;}
 .orange{background:#f4a300;}
 .purple{background:#8e5eff;}
 
-/* INFO */
+/* NAME */
 .player-name{
-    font-size:18px;
+    font-size:20px;
     font-weight:bold;
 }
 
+/* ROW */
 .player-row{
     margin-top:6px;
     display:flex;
@@ -132,6 +142,7 @@ body{
     font-size:14px;
 }
 
+/* STATS */
 .player-stats{
     margin-top:7px;
     color:#888;
@@ -144,51 +155,15 @@ body{
 }
 
 .points{
-    font-size:26px;
+    font-size:28px;
     font-weight:bold;
 }
 
 .pts{
     color:#777;
     font-size:12px;
-    margin-top:2px;
 }
 
-/* BOTTOM NAV */
-.bottom-nav{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#090909;
-    border-top:1px solid rgba(255,255,255,0.06);
-    display:flex;
-    justify-content:space-around;
-    padding:14px 0;
-}
-
-.nav-item{
-    text-align:center;
-    color:#777;
-    font-size:13px;
-}
-
-.active{
-    color:white;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.top h1{
-    font-size:42px;
-}
-
-.player-card{
-    padding:18px;
-}
-
-}
 /* PLAYER PAGE */
 
 .player-page{
@@ -198,13 +173,15 @@ body{
 }
 
 .back-btn{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
     margin-bottom:20px;
-    color:white;
+    color:#aaa;
     text-decoration:none;
-    opacity:0.7;
 }
 
+/* PROFILE */
 .profile-card{
     background:#111;
     border:1px solid rgba(255,255,255,0.05);
@@ -212,6 +189,7 @@ body{
     padding:28px;
 }
 
+/* TOP PROFILE */
 .top-profile{
     display:flex;
     gap:20px;
@@ -219,18 +197,21 @@ body{
     flex-wrap:wrap;
 }
 
+/* BIG PFP */
 .profile-pic{
-    width:95px;
-    height:95px;
+    width:100px;
+    height:100px;
     border-radius:24px;
     background:#222;
 }
 
+/* BIG NAME */
 .big-name{
     font-size:42px;
     font-weight:bold;
 }
 
+/* PLAYER RANK */
 .player-rank{
     margin-top:8px;
     display:inline-block;
@@ -241,6 +222,7 @@ body{
     font-size:14px;
 }
 
+/* TAGS */
 .tags{
     display:flex;
     gap:10px;
@@ -254,8 +236,12 @@ body{
     border-radius:18px;
     font-size:13px;
     color:#aaa;
+    display:flex;
+    align-items:center;
+    gap:8px;
 }
 
+/* MAIN STATS */
 .main-stats{
     display:flex;
     gap:15px;
@@ -280,6 +266,7 @@ body{
     margin-top:8px;
 }
 
+/* PROGRESS */
 .progress-section{
     margin-top:30px;
 }
@@ -299,6 +286,7 @@ body{
     background:white;
 }
 
+/* SMALL GRID */
 .small-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -323,18 +311,51 @@ body{
     margin-top:8px;
 }
 
-@media(max-width:768px){
-
-.small-grid{
-grid-template-columns:1fr;
+/* BOTTOM NAV */
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#090909;
+    border-top:1px solid rgba(255,255,255,0.06);
+    display:flex;
+    justify-content:space-around;
+    padding:14px 0;
 }
 
-.main-stats{
-flex-direction:column;
+.nav-item{
+    text-align:center;
+    color:#777;
+    font-size:13px;
+}
+
+.nav-item i{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.active{
+    color:white;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.top h1{
+    font-size:42px;
 }
 
 .big-name{
-font-size:34px;
+    font-size:34px;
+}
+
+.main-stats{
+    flex-direction:column;
+}
+
+.small-grid{
+    grid-template-columns:1fr;
 }
 
 }
