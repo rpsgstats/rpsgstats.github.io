@@ -68,7 +68,7 @@ value:"£0"
 
 "sweatyballs.VRFS":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Striker",
 points:0,
 goals:0,
 assists:0,
@@ -90,7 +90,7 @@ value:"£0"
 
 "ccxze":{
 rank:"Bronze I",
-position:"Winger",
+position:"Goalkeeper",
 points:0,
 goals:0,
 assists:0,
@@ -145,7 +145,7 @@ value:"£0"
 
 "Dutch.":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -200,7 +200,7 @@ value:"£0"
 
 "Goob":{
 rank:"Bronze I",
-position:"Winger",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
@@ -211,7 +211,7 @@ value:"£0"
 
 "el bicho":{
 rank:"Bronze I",
-position:"Attacker",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -231,20 +231,20 @@ cleansheets:0,
 value:"£0"
 },
 
-"Hyper. Vrfs pro":{
+"Hyper.":{
 rank:"Bronze I",
-position:"Striker",
-points:0,
-goals:0,
+position:"Winger",
+points:5,
+goals:1,
 assists:0,
 blocks:0,
 cleansheets:0,
-value:"£0"
+value:"£500,000"
 },
 
 "Brody":{
 rank:"Bronze I",
-position:"Defender",
+position:"Goalkeeper",
 points:0,
 goals:0,
 assists:0,
@@ -255,7 +255,7 @@ value:"£0"
 
 "JB-KAFZ":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -267,23 +267,23 @@ value:"£0"
 "JT.vrfs":{
 rank:"Bronze I",
 position:"Defender",
-points:0,
+points:2,
 goals:0,
 assists:0,
-blocks:0,
+blocks:1,
 cleansheets:0,
-value:"£0"
+value:"£200,000"
 },
 
 "ZZZ":{
 rank:"Bronze I",
-position:"Midfielder",
-points:0,
+position:"Goalkeeper",
+points:6,
 goals:0,
 assists:0,
-blocks:0,
+blocks:3,
 cleansheets:0,
-value:"£0"
+value:"£600,000"
 },
 
 "Kylian mbappe":{
@@ -321,7 +321,7 @@ value:"£0"
 
 "MEMOPRIMEWC":{
 rank:"Bronze I",
-position:"Midfielder",
+position:"Goalkeeper",
 points:0,
 goals:0,
 assists:0,
@@ -332,7 +332,7 @@ value:"£0"
 
 "AntonioTheSt.":{
 rank:"Bronze I",
-position:"Defender",
+position:"Striker",
 points:0,
 goals:0,
 assists:0,
@@ -343,7 +343,7 @@ value:"£0"
 
 "Yamal?":{
 rank:"Bronze I",
-position:"Winger",
+position:"Midfielder",
 points:0,
 goals:0,
 assists:0,
@@ -365,7 +365,7 @@ value:"£0"
 
 "Ghost=Him":{
 rank:"Bronze I",
-position:"Striker",
+position:"Defender",
 points:0,
 goals:0,
 assists:0,
@@ -388,12 +388,12 @@ value:"£0"
 "DEVVYSNTNXVA":{
 rank:"Bronze I",
 position:"Goalkeeper",
-points:0,
+points:18,
 goals:0,
 assists:0,
-blocks:0,
-cleansheets:0,
-value:"£0"
+blocks:7,
+cleansheets:1,
+value:"£1,800,000"
 },
 
 "inzagi":{
@@ -420,7 +420,7 @@ value:"£0"
 
 "Saiku":{
 rank:"Bronze I",
-position:"Defender",
+position:"Midfeilder",
 points:0,
 goals:0,
 assists:0,
@@ -442,7 +442,7 @@ value:"£0"
 
 "sky":{
 rank:"Bronze I",
-position:"Goalkeeper",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -453,35 +453,35 @@ value:"£0"
 
 "Snowzzz":{
 rank:"Bronze I",
-position:"Midfielder",
-points:0,
+position:"Defender",
+points:4,
 goals:0,
 assists:0,
-blocks:0,
+blocks:2,
 cleansheets:0,
-value:"£0"
+value:"£400,000"
 },
 
 "ashtronaut":{
-rank:"Bronze I",
+rank:"Bronze II",
 position:"Striker",
-points:0,
-goals:0,
-assists:0,
+points:21,
+goals:3,
+assists:2,
 blocks:0,
 cleansheets:0,
-value:"£0"
+value:"£2,100,000"
 },
 
 "ATOMIC":{
 rank:"Bronze I",
-position:"Defender",
-points:0,
-goals:0,
-assists:0,
+position:"Winger",
+points:16,
+goals:2,
+assists:2,
 blocks:0,
 cleansheets:0,
-value:"£0"
+value:"£1,600,000"
 },
 
 "type":{
@@ -498,17 +498,17 @@ value:"£0"
 "Vortex":{
 rank:"Bronze I",
 position:"Winger",
-points:0,
+points:3,
 goals:0,
-assists:0,
+assists:1,
 blocks:0,
 cleansheets:0,
-value:"£0"
+value:"£300,000"
 },
 
-"slax":{
+"Zumoo":{
 rank:"Bronze I",
-position:"Defender",
+position:"Winger",
 points:0,
 goals:0,
 assists:0,
@@ -519,24 +519,13 @@ value:"£0"
 
 "xd234jsjs":{
 rank:"Bronze I",
-position:"Goalkeeper",
-points:0,
+position:"Defender",
+points:6,
 goals:0,
 assists:0,
-blocks:0,
+blocks:3,
 cleansheets:0,
-value:"£0"
-},
-
-"Joshwini":{
-rank:"Bronze I",
-position:"Midfielder",
-points:0,
-goals:0,
-assists:0,
-blocks:0,
-cleansheets:0,
-value:"£0"
+value:"£600,000"
 },
 
 "ZanzTG.":{
